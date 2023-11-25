@@ -196,7 +196,7 @@ const NavbarMenu = () =>  {
   }, []);
  
   return (
-    <Navbar className="mx-auto max-w-screen-xl px-2 py-2" fullWidth={true}>
+    <Navbar className="container-fluid mx-auto px-2 py-2" fullWidth={true}>
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"

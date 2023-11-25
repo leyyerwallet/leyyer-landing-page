@@ -1,22 +1,22 @@
 import './App.css'
-import Footer  from './components/Footer/Footer'
+import Hero from './components/Hero/Hero'
 import NavbarMenu  from './components/Navbar/Navbar'
-import Welcome from './components/Welcome/Welcome'
+import Cards from './components/Cards/Cards'
 import Steps from './components/Steps/Steps'
 import Grid from './components/Grid/Grid'
+import Links from './components/Links/Links'
+import Footer  from './components/Footer/Footer'
 function App() {
  
 
   return (
     <>
     <NavbarMenu />
-    <main>
-      <div className='bg-gradient-to-r from-transparent to-blue-500'>
-      <Welcome />
-      </div>
-    </main>
+    <Hero />
+    <Cards />
     <Grid />
     <Steps />
+    <Links />
     <Footer />
     </>
   )
