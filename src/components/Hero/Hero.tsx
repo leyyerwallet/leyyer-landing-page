@@ -4,7 +4,7 @@ const Hero = () => {
     <div className="bg-white">
       <div className="relative isolate px-6 lg:px-8">
         <div className="mx-auto sm:py-48 lg:py-[9rem]">
-          <div className="grid grid-cols-2 relative gap-4 px-[6rem]">
+          <div className="grid grid-cols-2 relative gap-4">
             <div className="text-left">
               <Typography
                 variant="h1"
@@ -25,7 +25,7 @@ const Hero = () => {
                   }}
                 />
               </div>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <p className="mt-6 text-lg text-[2rem] font-normal leading-8 text-gray-600">
                 The ultimate solution for secure and convenient NFT, Crypto
                 asset management
               </p>

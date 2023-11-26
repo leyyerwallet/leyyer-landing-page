@@ -10,7 +10,7 @@ function App() {
  
 
   return (
-    <>
+    <div className='px-[6rem]'>
     <NavbarMenu />
     <Hero />
     <Cards />
@@ -18,7 +18,7 @@ function App() {
     <Steps />
     <Links />
     <Footer />
-    </>
+    </div>
   )
 }
 

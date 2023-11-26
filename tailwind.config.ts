@@ -14,7 +14,9 @@ const config = withMT({
         display: ['"Oswald", "ui-serif"'],
         poppins: ['"Poppins"'], // Adds a new `font-display` class
       },
-      
+      backgroundImage: {
+        'cards': "url('src/assets/Leyyer-CD-01.png')",
+      }, 
       animation: {
         "text-slide":
           "text-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite",

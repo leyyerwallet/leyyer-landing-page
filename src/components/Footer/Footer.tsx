@@ -90,23 +90,24 @@ const Footer = () => {
             </Typography>
             </div>
           </div>
-          <div className="grid grid-cols-4 justify-between gap-4">
+          <div className="grid grid-cols-4 justify-between text-left">
             {LINKS.map(({ title, items }) => 
             <ul key={title}>
               <Typography
-                  variant="h6"
-                  color="blue-gray"
-                  className="mb-3 font-bold"
+              variant="small"
+                  color="black"
+                  className="mb-2 font-poppins leading-4 font-bold"
                 >
                   {title}
                 </Typography>
                 {items.map((link) => (
                   <li key={link}>
                       <Typography
+                      variant="small"
                       as="a"
                       href="#"
-                      color="gray"
-                      className="py-1.5 font-medium transition-colors opacity-40 hover:text-blue-gray-900"
+                      color="black"
+                      className="py-1.5 font-poppins font-medium leading-4 transition-colors opacity-40 hover:text-blue-gray-900"
                     >
                       {link}
                     </Typography>

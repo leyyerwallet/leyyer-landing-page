@@ -2,28 +2,27 @@ import { Typography, Button } from "@material-tailwind/react";
 
 const Cards = () => {
   return (
-    <div className="section-fluid">
-    <div className="m-[2rem] text-left">
-    <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Crypto Cards
-            </h2>
-           </div>
-    
-      <div className="grid grid-cols-2 gap-4 rounded-[20px] bg-[#00D39529] bg-center justify-center m-6 p-[2rem]">
-        <div>
-          <div className="m-[10rem]">
-            <Typography variant="h4" color="black" className="font-poppins">
-              Make payments with VISA cards around the world, in your city and
-              of course in your local grocery shop
-            </Typography>
-          </div>
-          <div className="m-[4rem]">
-            <Button fullWidth>block level button</Button>
-          </div>
+    <div className="section-fluid m-[7rem]">
+      <div className="py-2 text-left m-6">
+        <h2 className="text-2xl font-bold font-poppins tracking-tight text-gray-900 sm:text-4xl ">
+          Crypto Cards
+        </h2>
+      </div>
+      <div className="grid grid-cols-2 gap-4 rounded-[40px] bg-[#00D39529]/20 bg-center justify-center">
+        <div className="m-[3rem] text-left">
+          <Typography variant="h4" color="black" className="font-poppins font-normal text-[2rem]">
+            Make payments with <br/> VISA cards around the world, in your city <br/> and of
+            course in your <br/> local grocery shop
+          </Typography>
         </div>
-        <div>
-          <img src={"src/assets/Leyyer-CD-01.png"} className="m-[-10rem]" />
+        <div className="text-right object-top">
+          <img src={"src/assets/Leyyer-CD-01.png"} className="mt-[-10rem] w-screen h-auto" />
         </div>
+      </div>
+      <div className="m-[2rem] text-left">
+        <Button className="rounded-lg py-6 px-6 text-[1.25rem] bg-emerald text-white font-normal font-poppins normal-case px-[3rem]">
+          Request Your Card Today
+        </Button>
       </div>
     </div>
   );

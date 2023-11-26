@@ -196,24 +196,17 @@ const NavbarMenu = () =>  {
   }, []);
  
   return (
-    <Navbar className="container-fluid mx-auto px-2 py-2" fullWidth={true}>
+    <Navbar className="container-fluid py-10 shadow-none" fullWidth={true}>
       <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-        >
-          Leyyer Wallet
-        </Typography>
+        <img src ={"src/assets/Group 2216.png"} className="w-40 h-auto" />
         <div className="hidden lg:block">
           <NavList />
         </div>
         <div className="hidden gap-2 lg:flex">
-          <Button variant="outlined" size="sm">
+          <Button variant="outlined" size="sm" className="text-emerald border-emerald normal-case">
            Sign Up
           </Button>
-          <Button variant="filled" size="sm">
+          <Button variant="filled" size="sm" className="text-white bg-emerald normal-case">
            Access Wallet
           </Button>
        
@@ -234,11 +227,11 @@ const NavbarMenu = () =>  {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
-            Log In
+          <Button variant="outlined" size="sm" className="text-emerald border-emerald normal-case" fullWidth>
+          Sign Up
           </Button>
-          <Button variant="gradient" size="sm" fullWidth>
-            Sign In
+          <Button variant="filled" size="sm" fullWidth className="text-white bg-emerald normal-case">
+          Access Wallet
           </Button>
         </div>
       </Collapse>
