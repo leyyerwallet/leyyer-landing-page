@@ -7,14 +7,14 @@ import {
 
 const Steps = () => {
   return (
-    <div className="py-[5rem]">
-      <Typography variant="h2" color="black" className="font-poppins">
+    <div className="py-[5rem] px-[6rem]">
+      <Typography variant="h2" color="black" className="font-poppins leading-loose">
         Follow the steps to Get Started
       </Typography>
-      <Typography variant="h4" color="gray" className="font-poppins">
+      <Typography variant="h4" className="font-poppins text-gray-400 font-medium">
         Here are a few reasons why you should choose Coin
       </Typography>
-      <div className="grid grid-cols-3 gap-4 bg-white justify-center m-6 p-8">
+      <div className="grid lg:grid-cols-3 gap-4 bg-white justify-center m-6 pt-8 sm:grid-cols-1">
         <div>
           <Card className="m-8 w-96 shadow-none">
             <CardHeader className="shadow-none">
@@ -25,11 +25,11 @@ const Steps = () => {
               />
             </CardHeader>
             <CardBody className="justify-center">
-              <Typography variant="h5" color="blue-gray" className="mb-2">
+              <Typography variant="h5" color="blue-gray" className="mb-2 text-[25px] md:leading-tight sm:leading-tight">
                 Get a Wallet
               </Typography>
-              <Typography>
-                Create a new wallet with easy.All wallets created at your
+              <Typography className="text-[16px]">
+              Get started with the application.<br/>Download mobile or use the web app
                 disposal
               </Typography>
             </CardBody>
@@ -45,11 +45,11 @@ const Steps = () => {
               />
             </CardHeader>
             <CardBody className="justify-center">
-              <Typography variant="h5" color="blue-gray" className="mb-2">
+              <Typography variant="h5" color="blue-gray" className="mb-2 text-[25px]">
                 Do the Crypto!
               </Typography>
-              <Typography>
-                Create a new wallet with easy.All wallets created at your
+              <Typography className="text-[16px]">
+                Create a new wallet with easy.<br/> All wallets created at your
                 disposal
               </Typography>
             </CardBody>
@@ -65,11 +65,11 @@ const Steps = () => {
               />
             </CardHeader>
             <CardBody className="justify-center">
-              <Typography variant="h5" color="blue-gray" className="mb-2">
+              <Typography variant="h5" color="blue-gray" className="mb-2 text-[25px]">
                 Access the Wallet
               </Typography>
-              <Typography>
-                Buy crypto with Credit Card. Enjoy the app
+              <Typography className="text-[16px]">
+                Buy crypto with Credit Card.<br/>Enjoy the app
               </Typography>
             </CardBody>
           </Card>

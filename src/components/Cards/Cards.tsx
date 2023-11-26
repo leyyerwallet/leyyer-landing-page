@@ -4,15 +4,15 @@ const Cards = () => {
   return (
     <div className="section-fluid m-[7rem]">
       <div className="py-2 text-left m-6">
-        <h2 className="text-2xl font-bold font-poppins tracking-tight text-gray-900 sm:text-4xl ">
+        <h2 className="lg:text-5xl font-bold font-poppins tracking-tight text-gray-900 sm:text-5xl ">
           Crypto Cards
         </h2>
       </div>
-      <div className="grid grid-cols-2 gap-4 rounded-[40px] bg-[#00D39529]/20 bg-center justify-center">
+      <div className="grid grid-cols-2 gap-4 rounded-[40px] bg-[#00D39529]/20 bg-center">
         <div className="m-[3rem] text-left">
-          <Typography variant="h4" color="black" className="font-poppins font-normal text-[2rem]">
-            Make payments with <br/> VISA cards around the world, in your city <br/> and of
-            course in your <br/> local grocery shop
+          <Typography variant="h4" color="black" className="font-poppins  font-normal text-[2.5rem]">
+            Make payments with VISA cards around the world, in your city and of
+            course in your local grocery shop
           </Typography>
         </div>
         <div className="text-right object-top">

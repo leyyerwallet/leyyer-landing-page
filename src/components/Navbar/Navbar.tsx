@@ -196,7 +196,7 @@ const NavbarMenu = () =>  {
   }, []);
  
   return (
-    <Navbar className="container-fluid py-10 shadow-none" fullWidth={true}>
+    <Navbar className="container-fluid py-10 shadow-none px-[7rem]" fullWidth={true}>
       <div className="flex items-center justify-between text-blue-gray-900">
         <img src ={"src/assets/Group 2216.png"} className="w-40 h-auto" />
         <div className="hidden lg:block">

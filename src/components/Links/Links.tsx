@@ -2,16 +2,16 @@ import { Typography, Button} from "@material-tailwind/react";
 
 const Links = () => {
   return (
-    <div className="container-fluid grid grid-cols-2 gap-4 bg-[#00D395] place-content-start my-6 py-8">
-      <div className="my-2 p-2 ">
+    <div className="container-fluid grid grid-cols-2 gap-4 bg-[#00D395] place-content-start my-6 py-[4rem]">
+      <div className="my-2 p-2 mx-[8rem]">
         <Typography
           variant="h2"
           color="white"
-          className="font-poppins font-bold"
+          className="font-poppins font-bold text-left"
         >
-          Get your Everything Wallet now!
+          Get your Everything <br/> Wallet now!
         </Typography>
-        <div className="mt-6">
+        <div className="mt-6 text-left">
           <Button
             variant="filled"
             size="lg"

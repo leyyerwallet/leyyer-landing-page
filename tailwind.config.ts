@@ -6,7 +6,8 @@ const config = withMT({
       'midnight': "#121063",
       'emerald': "#00D395",
       'gray' :{
-        300: '#e2e8f0'
+        300: '#e2e8f0',
+        400: 'rgba(0, 0, 0, 0.4)'
       }
     },
     extend: {
@@ -16,7 +17,10 @@ const config = withMT({
       },
       backgroundImage: {
         'cards': "url('src/assets/Leyyer-CD-01.png')",
-      }, 
+      },
+      variants: {
+        gridAutoFlow: ['responsive', 'hover', 'focus'],
+      },
       animation: {
         "text-slide":
           "text-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite",

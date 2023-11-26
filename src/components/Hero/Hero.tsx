@@ -1,15 +1,16 @@
 import { Typography } from "@material-tailwind/react";
+import './styles.css'
 const Hero = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white px-[6rem]">
       <div className="relative isolate px-6 lg:px-8">
         <div className="mx-auto sm:py-48 lg:py-[9rem]">
-          <div className="grid grid-cols-2 relative gap-4">
-            <div className="text-left">
+          <div className="grid grid-cols-2 relative gap-4 md:grid-cols-2 sm:grid-cols-1">
+            <div className="text-left"> 
               <Typography
                 variant="h1"
                 color="black"
-                className="font-poppins text-[48px] leading-[60px] text-justify font-[900] text-gray-900 sm:text-6xl"
+                className="font-poppins text-[48px] leading-[60px]  font-[900] text-gray-900 sm:text-6xl"
               >
                 Non-custodial <br /> Super Wallet App
               </Typography>
@@ -25,8 +26,8 @@ const Hero = () => {
                   }}
                 />
               </div>
-              <p className="mt-6 text-lg text-[2rem] font-normal leading-8 text-gray-600">
-                The ultimate solution for secure and convenient NFT, Crypto
+              <p className="mt-6 text-[1.25rem] font-400 leading-8 text-gray-600 font-poppins">
+                The ultimate solution for secure and <br/> convenient NFT, Crypto
                 asset management
               </p>
             </div>
@@ -39,32 +40,64 @@ const Hero = () => {
         {/**
          * AVAILABLE ON
          */}
-        <div className="">
-          <div className="font-extrabold text-4xl md:text-4xl [text-wrap:balance] bg-clip-text text-black bg-gradient-to-r from-slate-200/60 to-50% to-slate-200">
-            Available Devices
-            <span className="inline-flex flex-col border-2 border-white rounded-lg p-6 m-7 text-emerald bg-gray
-             h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
-              <ul className="block animate-text-slide-3 text-left leading-tight [&_li]:block">
-                <li>
-                    Mobile
-                </li>
-                <li>
-                    Web App 
-                </li>
-                <li> Extension </li>
-                <li aria-hidden="true">
-                    Mobile
-                </li>
-              </ul>
-            </span>
+
+    <div className="wrapper">
+      <Typography variant="h2" color="black" className="2xl m-5 font-poppins font-bold"> Available Devices </Typography>
+      <div className="carousel">
+        <div className="carousel__item">
+          <div className="carousel__item-body">
+          <p className="text-2xl font-bold font-poppins">Mobile</p>
+          </div>
+          
+        </div>
+        <div className="carousel__item">
+        <div className="carousel__item-body">
+          <p className="text-2xl font-bold font-poppins">Web App</p>
           </div>
         </div>
-
+        <div className="carousel__item">
+        <div className="carousel__item-body">
+          <p className="text-2xl font-bold font-poppins">Extension</p>
+          </div>
+        </div>
+        <div className="carousel__item">
+        <div className="carousel__item-body">
+          <p className="text-2xl font-bold font-poppins">Mobile</p>
+          </div>
+        </div>
+        <div className="carousel__item">
+        <div className="carousel__item-body">
+          <p className="text-2xl font-bold font-poppins">Web App</p>
+          </div>
+        </div>
+        <div className="carousel__item">
+        <div className="carousel__item-body">
+          <p className="text-2xl font-bold font-poppins">Extension</p>
+          </div>
+        </div>
+        <div className="carousel__item">
+        <div className="carousel__item-body">
+          <p className="text-2xl font-bold font-poppins">Mobile</p>
+          </div>
+        </div>
+        <div className="carousel__item">
+        <div className="carousel__item-body">
+          <p className="text-2xl font-bold font-poppins">Web App</p>
+          </div>
+        </div>
+        <div className="carousel__item">
+        <div className="carousel__item-body">
+          <p className="text-2xl font-bold font-poppins">Extension</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
         {/***
          * MANAGE PORTFOLIO
          */}
 
-        <div className="grid grid-cols-2 relative gap-4 my-6 py-8">
+        <div className="grid lg:grid-cols-2 relative gap-4 my-6 py-8 md:grid-cols-1 sm:grid-cols-1">
           <div className="inset-y-0 left-0">
             <img src={"src/assets/app-mockup.png"} />
           </div>
@@ -78,8 +111,8 @@ const Hero = () => {
             </Typography>
             <Typography
               variant="h4"
-              color="gray"
-              className="font-poppins text-[40px] text-justify font-medium"
+              color="black"
+              className="font-poppins text-[40px] text-justify font-normal"
             >
               Buy, sell & swap the <br />
               cryptocurrencies you want <br /> anytime, anywhere.
