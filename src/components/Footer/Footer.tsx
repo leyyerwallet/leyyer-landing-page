@@ -33,7 +33,7 @@ const Footer = () => {
     <footer className="relative w-full pt-10">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2 sm:grid-cols-1">
-          <div className="grid grid-rows-6 grid-flow-col gap-2 sm:grid-rows-2">
+          <div className="grid lg:grid-rows-6 grid-flow-col gap-2 sm:grid-rows-2">
             <div className="mb-0">
               <img src={logo} className="w-[15rem] h-auto"/>
             </div>
