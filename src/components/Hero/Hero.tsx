@@ -1,5 +1,7 @@
-import { Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react"
 import './styles.css'
+import pic1 from '../../assets/banner.png'
+import pic2 from '../../assets/app-mockup.png'
 const Hero = () => {
   return (
     <div className="bg-white px-[6rem]">
@@ -32,7 +34,7 @@ const Hero = () => {
               </p>
             </div>
             <div className="inset-y-0 left-0">
-              <img src={"src/assets/banner.png"} />
+              <img src={pic1} />
             </div>
           </div>
         </div>
@@ -99,7 +101,7 @@ const Hero = () => {
 
         <div className="grid lg:grid-cols-2 relative gap-4 my-6 py-8 md:grid-cols-1 sm:grid-cols-1">
           <div className="inset-y-0 left-0">
-            <img src={"src/assets/app-mockup.png"} />
+            <img src={pic2} />
           </div>
           <div className="mt-[30%] space-x-4 space-y-4">
             <Typography

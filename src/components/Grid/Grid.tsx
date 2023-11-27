@@ -5,6 +5,11 @@ import {
   CardFooter,
   Typography,
 } from "@material-tailwind/react";
+import pic1 from '../../assets/card.png'
+import pic2 from '../../assets/manage.png'
+import pic3 from '../../assets/div.png'
+import pic4 from '../../assets/Grayscale.png'
+import pic5 from '../../assets/spend.png'
 
 const Grid = () => {
   return (
@@ -38,7 +43,7 @@ const Grid = () => {
             </CardBody>
             <CardFooter className="pt-0 text-center">
               <img
-                src={"src/assets/card.png"}
+                src={pic1}
                 alt="card-image"
                 className="w-20 h-auto m-auto"
               />
@@ -66,7 +71,7 @@ const Grid = () => {
             </CardBody>
             <CardFooter className="pt-0">
               <img
-                src={"src/assets/manage.png"}
+                src={pic2}
                 alt="card-image"
                 className="w-20 h-auto mx-auto"
               />
@@ -85,7 +90,7 @@ const Grid = () => {
                 <span className="text-emerald"> Dapps </span>
               </Typography>
               <img
-                src={"src/assets/Grayscale.png"}
+                src={pic4}
                 alt="card-image"
                 className="w-20 h-auto m-auto"
               />
@@ -116,7 +121,7 @@ const Grid = () => {
                 <span className="text-emerald"> Customer </span> Support
               </Typography>
               <img
-                src={"src/assets/div.png"}
+                src={pic3}
                 alt="card-image"
                 className="mb-4 w-40 h-auto m-auto"
               />
@@ -162,7 +167,7 @@ const Grid = () => {
               </CardBody>
               <CardFooter className="text-center mx-[2rem]">
                 <img
-                  src={"src/assets/spend.png"}
+                  src={pic5}
                   alt="card-image"
                   className="pt-10"
                 />

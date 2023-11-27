@@ -12,6 +12,7 @@ import {
   MenuList,
   MenuItem,
 } from "@material-tailwind/react";
+import logo from '../../assets/logo-nav.png'
 import {
   ChevronDownIcon,
   Bars3Icon,
@@ -187,7 +188,7 @@ function NavList() {
  
 const NavbarMenu = () =>  {
   const [openNav, setOpenNav] = React.useState(false);
- 
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
@@ -198,7 +199,7 @@ const NavbarMenu = () =>  {
   return (
     <Navbar className="container-fluid py-10 shadow-none px-[7rem]" fullWidth={true}>
       <div className="flex items-center justify-between text-blue-gray-900">
-        <img src ={"src/assets/Group 2216.png"} className="w-40 h-auto" />
+        <img src ={logo} className="w-40 h-auto" />
         <div className="hidden lg:block">
           <NavList />
         </div>
