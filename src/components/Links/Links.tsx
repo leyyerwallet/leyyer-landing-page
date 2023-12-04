@@ -1,5 +1,7 @@
 import { Typography, Button} from "@material-tailwind/react";
-
+import app_store from '../../assets/app-stores/app-store.png'
+import google_play from '../../assets/app-stores/google-play.png'
+import web from '../../assets/app-stores/chrome-web.png'
 const Links = () => {
   return (
     <div className="container-fluid grid grid-cols-2 gap-4 bg-[#00D395] place-content-start my-6 py-[4rem]">
@@ -25,16 +27,16 @@ const Links = () => {
         </div>
         <div className="flex flex-wrap my-2 p-2 gap-4 justify-center">
            <div>
-           <img src="src/assets/app-stores/app-store.png" alt="app-store" className="w-[8rem] h-auto" />
+           <img src={app_store} alt="app-store" className="w-[8rem] h-auto" />
            </div>
           
            <div>
-           <img src="src/assets/app-stores/google-play.png" alt="google-play" className="w-[8rem] h-auto " />
+           <img src={google_play} alt="google-play" className="w-[8rem] h-auto " />
            
            </div>
            
             <div>
-            <img src="src/assets/app-stores/chrome-web.png" alt="chrome-web" className="w-[10rem] h-auto" />
+            <img src={web} alt="chrome-web" className="w-[10rem] h-auto" />
            
             </div>
             

@@ -4,7 +4,9 @@ import {
   CardBody,
   Typography,
 } from "@material-tailwind/react";
-
+import pic1 from '../../assets/icons/credit-card.png'
+import pic2 from '../../assets/icons/desktop-computer.png'
+import pic3 from '../../assets/icons/wallet.png'
 const Steps = () => {
   return (
     <div className="py-[5rem] px-[6rem]">
@@ -19,7 +21,7 @@ const Steps = () => {
           <Card className="m-8 w-96 shadow-none">
             <CardHeader className="shadow-none">
               <img
-                src={"src/assets/icons/desktop-computer.png"}
+                src={pic2}
                 alt="card-image"
                 className="w-[8rem] h-auto mx-auto"
               />
@@ -39,7 +41,7 @@ const Steps = () => {
           <Card className="m-8 w-96 shadow-none">
             <CardHeader className="shadow-none">
               <img
-                src={"src/assets/icons/credit-card.png"}
+                src={pic3}
                 alt="card-image"
                 className="w-[8rem] h-auto mx-auto"
               />
@@ -59,7 +61,7 @@ const Steps = () => {
           <Card className="m-8 w-96 shadow-none">
             <CardHeader className="shadow-none">
               <img
-                src={"src/assets/icons/wallet.png"}
+                src={pic1}
                 alt="card-image"
                 className="w-[8rem] h-auto mx-auto"
               />
