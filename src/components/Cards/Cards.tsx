@@ -8,9 +8,9 @@ const Cards = () => {
           Crypto Cards
         </h2>
       </div>
-      <div className="grid grid-cols-2 gap-4 rounded-[40px] bg-[#00D39529]/20 bg-center">
-        <div className="m-[3rem] text-left">
-          <Typography variant="h4" color="black" className="font-poppins  font-normal text-[2.5rem]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 rounded-[40px] bg-[#00D39529]/20 bg-center">
+        <div className="m-[3rem] lg:text-left xl:">
+          <Typography variant="h4" color="black" className="font-poppins font-normal text-[2.5rem] xl:text-center">
             Make payments with VISA cards around the world, in your city and of
             course in your local grocery shop
           </Typography>
@@ -20,7 +20,7 @@ const Cards = () => {
         </div>
       </div>
       <div className="m-[2rem] text-left">
-        <Button className="rounded-lg py-6 px-6 text-[1.25rem] bg-emerald text-white font-normal font-poppins normal-case px-[3rem]">
+        <Button className="rounded-lg py-6 text-[1.25rem] bg-emerald text-white font-normal font-poppins normal-case px-[3rem]">
           Request Your Card Today
         </Button>
       </div>
