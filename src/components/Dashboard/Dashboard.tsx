@@ -45,7 +45,7 @@ const Dashboard = () => {
          */}
 
         <div className="wrapper mt-20">
-          <Typography variant="h2" color="black" className="2xl m-5 font-poppins font-bold 2xl:text-[55px]"> Available Devices </Typography>
+          <Typography variant="h2" color="black" className="2xl m-5 font-poppins font-bold 2xl:text-[45px]"> Available Devices </Typography>
           <div className="carousel">
             <div className="carousel__item">
               <div className="carousel__item-body">
@@ -107,7 +107,7 @@ const Dashboard = () => {
             <Typography
               variant="h1"
               color="black"
-              className="font-poppins text-[48px] leading-[60px] text-justify font-[700] tracking-tight 2xl:mt-28 2xl:leading-snug 3xl:text-[65px] 3xl:leading-[72px]"
+              className="font-poppins text-[45px] leading-[60px] text-justify font-[700] tracking-tight 2xl:mt-28 2xl:leading-snug 3xl:text-[65px] 3xl:leading-[72px]"
             >
               Manage your crypto <br /> portfolio securely
             </Typography>
