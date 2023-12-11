@@ -1,23 +1,19 @@
-import { useMediaQuery } from 'react-responsive';
 import { Typography } from "@material-tailwind/react"
 import './styles.css'
-import pic1 from '../../assets/banner.png'
+import preview from '../../assets/preview.png'
 import pic2 from '../../assets/app-mockup.png'
 
 const Dashboard = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-  const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
-
   return (
-    <div className={`bg-white px-[6rem] ${isMobile ? 'px-4' : ''}`}>
-      <div className="relative isolate px-6 lg:px-8">
-        <div className="mx-auto sm:py-48 lg:py-[9rem]">
-          <div className={`grid grid-cols-2 relative gap-4 md:grid-cols-2 sm:grid-cols-1 ${isTablet ? 'grid-cols-1' : ''}`}>
-            <div className="text-left"> 
+    <div className="bg-white px-[6rem]">
+      <div className="isolate px-10 lg:px-8">
+        <div className="lg:py-[2rem] sm:py-48  2xl:justify-center">
+          <div className="grid grid-cols-2 relative gap-4 md:grid-cols-2 sm:grid-cols-1">
+            <div className="text-left pt-[9rem]"> 
               <Typography
                 variant="h1"
                 color="black"
-                className={`font-poppins text-[48px] leading-[60px]  font-[900] text-gray-900 sm:text-6xl ${isMobile ? 'text-4xl' : ''}`}
+                className="font-poppins lg:text-[38px] lg:leading-normal xl:text-[35px] 2xl:text-[55px] 2xl:font-[900] text-gray-900 sm:text-sm sm:font-semibold"
               >
                 Non-custodial <br /> Super Wallet App
               </Typography>
@@ -33,13 +29,13 @@ const Dashboard = () => {
                   }}
                 />
               </div>
-              <p className={`mt-6 text-[1.25rem] font-400 leading-8 text-gray-600 font-poppins ${isMobile ? 'text-base' : ''}`}>
+              <p className="mt-6 text-[1.25rem] font-400 leading-8 text-gray-600 font-poppins">
                 The ultimate solution for secure and <br/> convenient NFT, Crypto
                 asset management
               </p>
             </div>
-            <div className={`inset-y-0 left-0 ${isMobile ? 'mt-6' : ''}`}>
-              <img src={pic1} />
+            <div className="text-right pl-20 pt-10 pb-20">
+              <img src={preview} className='w-[80%]' />
             </div>
           </div>
         </div>
@@ -48,8 +44,8 @@ const Dashboard = () => {
          * AVAILABLE ON
          */}
 
-        <div className="wrapper">
-          <Typography variant="h2" color="black" className="2xl m-5 font-poppins font-bold"> Available Devices </Typography>
+        <div className="wrapper mt-20">
+          <Typography variant="h2" color="black" className="2xl m-5 font-poppins font-bold 2xl:text-[55px]"> Available Devices </Typography>
           <div className="carousel">
             <div className="carousel__item">
               <div className="carousel__item-body">
@@ -103,25 +99,25 @@ const Dashboard = () => {
          * MANAGE PORTFOLIO
          */}
 
-        <div className={`grid lg:grid-cols-2 relative gap-4 my-6 py-8 md:grid-cols-1 sm:grid-cols-1 ${isMobile ? 'grid-cols-1' : ''}`}>
-          <div className="inset-y-0 left-0">
+        <div className="grid lg:grid-cols-2 relative gap-4 my-6 py-8 md:grid-cols-1 sm:grid-cols-1">
+          <div className="inset-y-0 left-0 xl:mt-[30%]">
             <img src={pic2} />
           </div>
           <div className="mt-[30%] space-x-4 space-y-4">
             <Typography
               variant="h1"
               color="black"
-              className={`font-poppins text-[48px] leading-[60px] text-justify font-[700] tracking-tight ${isMobile ? 'text-4xl' : ''}`}
+              className="font-poppins text-[48px] leading-[60px] text-justify font-[700] tracking-tight 2xl:mt-28 2xl:leading-snug 3xl:text-[65px] 3xl:leading-[72px]"
             >
               Manage your crypto <br /> portfolio securely
             </Typography>
             <Typography
               variant="h4"
               color="black"
-              className={`font-poppins text-[40px] text-justify font-normal ${isMobile ? 'text-2xl' : ''}`}
+              className="font-poppins text-[40px] text-left font-normal"
             >
-              Buy, sell & swap the <br />
-              cryptocurrencies you want <br /> anytime, anywhere.
+              Buy, sell & swap the <br/>
+              cryptocurrencies you want anytime, anywhere.
             </Typography>
           </div>
         </div>

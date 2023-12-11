@@ -13,14 +13,14 @@ import pic5 from '../../assets/spend.png'
 
 const Grid = () => {
   return (
-    <div className="container-fluid overflow-auto bg-[#F2F2F2] pt-[3rem] px-[6rem] pb-0 md:container-fluid md:mx-auto sm:mx-auto">
+    <div className="container-fluid overflow-auto bg-[#F2F2F2] pt-[3rem] px-[6rem] pb-0 md:container-fluid md:mx-auto sm:mx-auto lg:justify-center 2xl:px-[2rem]">
       <div className="my-2 px-4 py-[2rem]">
         <Typography variant="h2" color="black" className="font-poppins font-bold tracking-tight">
           Assert <span className="text-emerald"> ownership </span> over your
           <span className="text-emerald"> Wallet </span> data
         </Typography>
       </div>
-      <div className="grid grid-flow-col grid-rows-3 gap-x-6 gap-y-6 mx-[3rem] px-6 sm:grid-flow-row sm:auto-cols-max md:grid-flow-col">
+      <div className="grid grid-flow-col grid-rows-3 gap-x-6 gap-y-6 mx-[3rem] px-6 sm:grid-flow-row sm:auto-cols-max md:grid-flow-col lg:justify-center">
         <div className="col-span-1">
           <Card className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none">
             <CardBody className="text-center mx-[2rem]">

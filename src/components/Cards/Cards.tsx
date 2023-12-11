@@ -9,8 +9,8 @@ const Cards = () => {
         </h2>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 rounded-[40px] bg-[#00D39529]/20 bg-center">
-        <div className="m-[3rem] lg:text-left xl:">
-          <Typography variant="h4" color="black" className="font-poppins font-normal text-[2.5rem] xl:text-center">
+        <div className="m-[3rem] lg:text-left 2xl:text-left">
+          <Typography variant="h4" color="black" className="font-poppins font-normal lg:text-[2rem] 3xl:text-[3rem]">
             Make payments with VISA cards around the world, in your city and of
             course in your local grocery shop
           </Typography>
