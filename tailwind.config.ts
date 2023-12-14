@@ -3,11 +3,14 @@ const config = withMT({
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      'midnight': "#121063",
-      'emerald': "#00D395",
+      'midnight': '#121063',
+      'emerald': '#00D395',
       'gray' :{
         300: '#e2e8f0',
         400: 'rgba(0, 0, 0, 0.4)'
+      },
+      'lime': {
+        400: 'rgb(163 230 53)'
       }
     },
     extend: {
