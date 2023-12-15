@@ -7,6 +7,7 @@ const Links = () => {
     <div className="container-fluid grid grid-cols-2 gap-4 bg-[#00D395] place-content-start my-6 py-[4rem]">
       <div className="my-2 p-2 mx-[8rem]">
         <Typography
+          placeholder={undefined}
           variant="h2"
           color="white"
           className="font-poppins font-bold text-left"
@@ -15,6 +16,7 @@ const Links = () => {
         </Typography>
         <div className="mt-6 text-left">
           <Button
+            placeholder={undefined}
             variant="filled"
             size="lg"
             color="white"

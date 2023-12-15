@@ -30,6 +30,7 @@ const Footer = () => {
             </div>
             <div className="flex gap-4 text-emerald">
               <Typography
+                placeholder={undefined}
                 as="a"
                 href="#"
                 className="opacity-80 transition-opacity hover:opacity-100"
@@ -48,6 +49,7 @@ const Footer = () => {
                 </svg>
               </Typography>
               <Typography
+                placeholder={undefined}
                 as="a"
                 href="#"
                 className="opacity-80 transition-opacity hover:opacity-100"
@@ -66,6 +68,7 @@ const Footer = () => {
                 </svg>
               </Typography>
               <Typography
+                placeholder={undefined}
                 as="a"
                 href="#"
                 className="opacity-80 transition-opacity hover:opacity-100"
@@ -80,6 +83,7 @@ const Footer = () => {
                 </svg>
               </Typography>
               <Typography
+                placeholder={undefined}
                 as="a"
                 href="#"
                 className="opacity-80 transition-opacity hover:opacity-100"
@@ -98,6 +102,7 @@ const Footer = () => {
                 </svg>
               </Typography>
               <Typography
+                placeholder={undefined}
                 as="a"
                 href="#"
                 className="opacity-80 transition-opacity hover:opacity-100"
@@ -120,7 +125,7 @@ const Footer = () => {
             <div></div>
 
             <div className="text-left">
-              <Typography color="blue-gray" className="font-normal">
+              <Typography placeholder={undefined} color="blue-gray" className="font-normal">
                 &copy; 2023 Material Tailwind
               </Typography>
             </div>
@@ -128,7 +133,7 @@ const Footer = () => {
           <div className="grid grid-cols-3 justify-between text-left">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
-                <Typography
+                <Typography placeholder={undefined}
                   variant="small"
                   color="black"
                   className="mb-2 font-poppins leading-4 font-bold"
@@ -137,7 +142,7 @@ const Footer = () => {
                 </Typography>
                 {items.map((link) => (
                   <li key={link}>
-                    <Typography
+                    <Typography placeholder={undefined}
                       variant="small"
                       as="a"
                       href="#"

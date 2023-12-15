@@ -10,6 +10,7 @@ const Hero = () => {
           <div className="grid grid-cols-2 relative gap-4 md:grid-cols-2 sm:grid-cols-1">
             <div className="text-left"> 
               <Typography
+                placeholder={undefined}
                 variant="h1"
                 color="black"
                 className="font-poppins text-[48px] leading-[60px]  font-[900] text-gray-900 sm:text-6xl"
@@ -44,7 +45,7 @@ const Hero = () => {
          */}
 
     <div className="wrapper">
-      <Typography variant="h2" color="black" className="2xl m-5 font-poppins font-bold"> Available Devices </Typography>
+      <Typography placeholder={undefined} variant="h2" color="black" className="2xl m-5 font-poppins font-bold"> Available Devices </Typography>
       <div className="carousel">
         <div className="carousel__item">
           <div className="carousel__item-body">
@@ -105,6 +106,7 @@ const Hero = () => {
           </div>
           <div className="mt-[30%] space-x-4 space-y-4">
             <Typography
+              placeholder={undefined}
               variant="h1"
               color="black"
               className="font-poppins text-[48px] leading-[60px] text-justify font-[700] tracking-tight"
@@ -112,6 +114,7 @@ const Hero = () => {
               Manage your crypto <br /> portfolio securely
             </Typography>
             <Typography
+              placeholder={undefined}
               variant="h4"
               color="black"
               className="font-poppins text-[40px] text-justify font-normal"
