@@ -1,4 +1,3 @@
-import React from "react";
 import { Typography } from "@material-tailwind/react";
 import './styles.css';
 import preview from '../../assets/preview.png';
