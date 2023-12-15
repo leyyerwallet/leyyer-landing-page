@@ -11,6 +11,7 @@ const Dashboard = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 gap-4 relative">
             <div className="md:pt-10">
               <Typography
+                placeholder={undefined}
                 variant="h1"
                 color="black"
                 className="font-poppins lg:text-2xl xl:text-3xl 2xl:text-4xl 2xl:font-bold text-gray-900 sm:text-sm sm:font-semibold"
@@ -44,7 +45,7 @@ const Dashboard = () => {
          * AVAILABLE ON
          */}
         <div className="wrapper mt-8 md:mt-20 relative">
-          <Typography variant="h2" color="black" className="md:m-4 font-poppins font-bold md:text-2xl 2xl:text-3xl"> Available Devices </Typography>
+          <Typography placeholder={undefined} variant="h2" color="black" className="md:m-4 font-poppins font-bold md:text-2xl 2xl:text-3xl"> Available Devices </Typography>
           <div className="carousel grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {Array.from({ length: 6 }, (_, index) => (
               <div key={index} className="carousel__item col-span-1 md:col-span-1 lg:col-span-2">
@@ -69,6 +70,7 @@ const Dashboard = () => {
           </div>
           <div className="mt-4 space-y-4">
             <Typography
+              placeholder={undefined}
               variant="h1"
               color="black"
               className="font-poppins text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:font-bold tracking-tight"
@@ -76,6 +78,7 @@ const Dashboard = () => {
               Manage your crypto <br /> portfolio securely
             </Typography>
             <Typography
+              placeholder={undefined}
               variant="h4"
               color="black"
               className="mt-6 text-base font-400 leading-6 text-gray-600 font-poppins">

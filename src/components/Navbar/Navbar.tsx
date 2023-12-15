@@ -31,9 +31,9 @@ function NavListMenu1() {
   const renderItems = navListMenuItems.map(
     ( title, key) => (
       <a href="#" key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
+        <MenuItem placeholder={undefined} className="flex items-center gap-3 rounded-lg">
           <div>
-            <Typography
+            <Typography placeholder={undefined}
               variant="h6"
               color="blue-gray"
               className="flex items-center text-sm font-bold"
@@ -56,8 +56,8 @@ function NavListMenu1() {
         allowHover={true}
       >
         <MenuHandler>
-          <Typography as="div" variant="small" className="font-medium">
-            <ListItem
+          <Typography placeholder={undefined} as="div" variant="small" className="font-medium">
+            <ListItem placeholder={undefined}
               className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
@@ -78,7 +78,7 @@ function NavListMenu1() {
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden w-[12 rem] gap-3 overflow-visible lg:grid">
+        <MenuList placeholder={undefined} className="hidden w-[12 rem] gap-3 overflow-visible lg:grid">
         <ul className="col-span-4 flex w-full flex-col gap-1 outline-none outline-0">
             {renderItems}
           </ul>
@@ -97,9 +97,9 @@ function NavListMenu2() {
   const renderItems = navListMenuItems2.map(
     ( title , key) => (
       <a href="#" key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
+        <MenuItem placeholder={undefined} className="flex items-center gap-3 rounded-lg">
           <div>
-            <Typography
+            <Typography placeholder={undefined}
               variant="h6"
               color="blue-gray"
               className="flex items-center text-sm font-bold"
@@ -122,8 +122,8 @@ function NavListMenu2() {
         allowHover={true}
       >
         <MenuHandler>
-          <Typography as="div" variant="small" className="font-medium">
-            <ListItem
+          <Typography placeholder={undefined} as="div" variant="small" className="font-medium">
+            <ListItem placeholder={undefined}
               className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
@@ -144,7 +144,7 @@ function NavListMenu2() {
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden w-[12 rem] gap-3 overflow-visible lg:grid">
+        <MenuList placeholder={undefined} className="hidden w-[12 rem] gap-3 overflow-visible lg:grid">
         <ul className="col-span-4 flex w-full flex-col gap-1 outline-none outline-0">
             {renderItems}
           </ul>
@@ -159,26 +159,26 @@ function NavListMenu2() {
  
 function NavList() {
   return (
-    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
-      <Typography
+    <List placeholder={undefined} className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+      <Typography placeholder={undefined}
         as="a"
         href="#"
         variant="small"
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">Assets</ListItem>
+        <ListItem placeholder={undefined} className="flex items-center gap-2 py-2 pr-4">Assets</ListItem>
       </Typography>
       <NavListMenu1 />
       <NavListMenu2 />
-      <Typography
+      <Typography placeholder={undefined}
         as="a"
         href="#"
         variant="small"
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
+        <ListItem placeholder={undefined} className="flex items-center gap-2 py-2 pr-4">
          NFTs
         </ListItem>
       </Typography>
@@ -197,22 +197,22 @@ const NavbarMenu = () =>  {
   }, []);
  
   return (
-    <Navbar className="container-fluid py-10 shadow-none px-[7rem]" fullWidth={true}>
+    <Navbar placeholder={undefined} className="container-fluid py-10 shadow-none px-[7rem]" fullWidth={true}>
       <div className="flex items-center justify-between text-blue-gray-900">
         <img src ={logo} className="w-40 h-auto" />
         <div className="hidden lg:block">
           <NavList />
         </div>
         <div className="hidden gap-2 lg:flex">
-          <Button variant="outlined" size="sm" className="text-emerald border-emerald normal-case">
+          <Button placeholder={undefined} variant="outlined" size="sm" className="text-emerald border-emerald normal-case">
            Sign Up
           </Button>
-          <Button variant="filled" size="sm" className="text-white bg-emerald normal-case">
+          <Button placeholder={undefined} variant="filled" size="sm" className="text-white bg-emerald normal-case">
            Access Wallet
           </Button>
        
         </div>
-        <IconButton
+        <IconButton placeholder={undefined}
           variant="text"
           color="blue-gray"
           className="lg:hidden"
@@ -228,10 +228,10 @@ const NavbarMenu = () =>  {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button variant="outlined" size="sm" className="text-emerald border-emerald normal-case" fullWidth>
+          <Button placeholder={undefined} variant="outlined" size="sm" className="text-emerald border-emerald normal-case" fullWidth>
           Sign Up
           </Button>
-          <Button variant="filled" size="sm" fullWidth className="text-white bg-emerald normal-case">
+          <Button placeholder={undefined} variant="filled" size="sm" fullWidth className="text-white bg-emerald normal-case">
           Access Wallet
           </Button>
         </div>
