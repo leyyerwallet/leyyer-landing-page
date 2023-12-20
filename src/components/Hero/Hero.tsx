@@ -1,6 +1,6 @@
 import { Typography } from "@material-tailwind/react"
 import './styles.css'
-import pic1 from '../../assets/banner.png'
+import pic1 from '../../assets/preview.png'
 import pic2 from '../../assets/app-mockup.png'
 const Hero = () => {
   return (
@@ -34,8 +34,12 @@ const Hero = () => {
                 asset management
               </p>
             </div>
-            <div className="inset-y-0 left-0">
-              <img src={pic1} />
+            <div className="flex justify-center items-center">
+              <img 
+                src={pic1} 
+                className="w-full max-w-md md:max-w-lg lg:max-w-xl object-contain" 
+                alt="Description of the image" 
+              />
             </div>
           </div>
         </div>
@@ -100,28 +104,38 @@ const Hero = () => {
          * MANAGE PORTFOLIO
          */}
 
-        <div className="grid lg:grid-cols-2 relative gap-4 my-6 py-8 md:grid-cols-1 sm:grid-cols-1">
-          <div className="inset-y-0 left-0">
-            <img src={pic2} />
+        <div className="grid lg:grid-cols-2 gap-4 my-6 py-8 md:grid-cols-1 sm:grid-cols-1 items-center">          
+          {/* Image Section */}
+          <div className="w-full h-full">
+            <img 
+              src={pic2} 
+              className="w-full h-full object-cover" 
+              alt="Description of the image" 
+            />
           </div>
-          <div className="mt-[30%] space-x-4 space-y-4">
+          
+          {/* Text Section */}
+          <div className="mt-6 md:mt-0">
             <Typography
               placeholder={undefined}
               variant="h1"
               color="black"
-              className="font-poppins text-[48px] leading-[60px] text-justify font-[700] tracking-tight"
+              className="font-poppins text-xl md:text-3xl leading-normal font-bold text-center md:text-left"
             >
               Manage your crypto <br /> portfolio securely
             </Typography>
-            <Typography
-              placeholder={undefined}
-              variant="h4"
-              color="black"
-              className="font-poppins text-[40px] text-justify font-normal"
-            >
-              Buy, sell & swap the <br />
-              cryptocurrencies you want <br /> anytime, anywhere.
-            </Typography>
+            
+            <div className="mt-4">
+              <Typography
+                placeholder={undefined}
+                variant="h4"
+                color="black"
+                className="font-poppins text-lg md:text-xl font-normal text-center md:text-left"
+              >
+                Buy, sell & swap the <br />
+                cryptocurrencies you want <br /> anytime, anywhere.
+              </Typography>
+            </div>
           </div>
         </div>
       </div>

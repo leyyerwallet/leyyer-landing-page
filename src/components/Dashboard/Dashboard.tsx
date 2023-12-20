@@ -35,7 +35,7 @@ const Dashboard = () => {
                 asset management
               </p>
             </div>
-            <div className="text-center md:text-right pt-4 md:pt-0">
+            <div className="">
               <img src={preview} className='w-full md:w-[80%] mx-auto md:mx-0' alt="Preview" />
             </div>
           </div>
@@ -64,11 +64,11 @@ const Dashboard = () => {
         {/***
          * MANAGE PORTFOLIO
          */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 py-8 sm:grid-cols-1">
-          <div className="relative w-full md:w-auto">
-            <img src={pic2} className="w-full h-auto md:rounded-lg md:w-full lg:w-2/3 xl:w-4/5 2xl:w-full mx-auto" alt="Manage Portfolio" />
-          </div>
-          <div className="mt-4 space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 py-8 sm:grid-cols-1 items-center">
+            <div className="relative w-full md:w-auto">
+              <img src={pic2} className="w-full h-auto md:rounded-lg md:w-full lg:w-2/3 xl:w-4/5 2xl:w-full mx-auto" alt="Manage Portfolio" />
+            </div>
+            <div className="mt-4 space-y-4 text-center md:text-left">
             <Typography
               placeholder={undefined}
               variant="h1"
