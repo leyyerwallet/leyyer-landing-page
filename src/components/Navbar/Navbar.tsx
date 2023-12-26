@@ -197,7 +197,7 @@ const NavbarMenu = () =>  {
   }, []);
  
   return (
-    <Navbar placeholder={undefined} className="container-fluid py-10 shadow-none px-[7rem]" fullWidth={true}>
+    <Navbar placeholder={undefined} className="container-fluid py-8 shadow-none px-[7rem]" fullWidth={true}>
       <div className="flex items-center justify-between text-blue-gray-900">
         <img src ={logo} className="w-40 h-auto" />
         <div className="hidden lg:block">
