@@ -208,7 +208,7 @@ const NavbarMenu = () =>  {
           Sign-Up 
           </Button>
           <Button placeholder={undefined} variant="filled" size="sm" className="text-white bg-emerald normal-case">
-           DEMO Wallet
+             Demo Wallet
           </Button>
        
         </div>
@@ -232,7 +232,7 @@ const NavbarMenu = () =>  {
           Sign-Up
           </Button>
           <Button placeholder={undefined} variant="filled" size="sm" fullWidth className="text-white bg-emerald normal-case">
-          DEMO Wallet
+            Demo Wallet
           </Button>
         </div>
       </Collapse>

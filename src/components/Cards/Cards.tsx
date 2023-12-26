@@ -9,7 +9,7 @@ const Cards = () => {
           Crypto Cards
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 rounded-[40px] bg-[#00D39529]/20 bg-center">
+      <div className="grid md:grid-cols-2 gap-4 rounded-[40px] bg-[#00D39529]/20 bg-center max-h-72">
         <div className="m-[2rem] md:m-[3rem] text-center md:text-left">
           <Typography
             placeholder={undefined}
