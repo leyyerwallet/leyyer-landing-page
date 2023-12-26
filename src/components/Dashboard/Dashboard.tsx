@@ -18,6 +18,7 @@ const Dashboard = () => {
               >
                 Non-custodial <br /> Super Wallet App
               </Typography>
+              
               <div
                 className="absolute inset-x-0 top-1/3 sm:top-2/3 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-2/3"
                 aria-hidden="true"

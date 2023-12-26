@@ -1,5 +1,5 @@
 import { Typography, Button } from "@material-tailwind/react";
-import cards from '../../assets/Leyyer-CD-01.png';
+import cards from '../../assets/Leyyer-CD-02.png';
 
 const Cards = () => {
   return (
@@ -24,7 +24,7 @@ const Cards = () => {
           </div>
         </div>
         <div className="hidden md:block text-center md:text-right">
-          <img src={cards} className="mt-[-8rem] w-full h-auto md:h-full" alt="Crypto Cards" />
+          <img src={cards} className="mt-[-8rem]  md:h-full" alt="Crypto Cards" />
         </div>
       </div>
       <div className="mt-4 md:mt-6 text-center">

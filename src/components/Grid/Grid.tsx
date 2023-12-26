@@ -1,35 +1,31 @@
 import {
   Card,
+  CardHeader,
   CardBody,
   CardFooter,
   Typography,
 } from "@material-tailwind/react";
-import pic1 from '../../assets/card.png';
-import pic2 from '../../assets/manage.png';
-import pic3 from '../../assets/div.png';
-import pic4 from '../../assets/Grayscale.png';
-import pic5 from '../../assets/spend.png';
+import pic1 from '../../assets/card.png'
+import pic2 from '../../assets/manage.png'
+import pic3 from '../../assets/div.png'
+import pic4 from '../../assets/Grayscale.png'
+import pic5 from '../../assets/spend.png'
 
 const Grid = () => {
   return (
-    <div className="container-fluid overflow-auto bg-[#F2F2F2] pt-[3rem] px-[6rem] pb-0 md:container-fluid md:mx-auto sm:mx-auto text-center">
+    <div className="container-fluid overflow-auto bg-[#F2F2F2] pt-[3rem] px-[6rem] pb-0 md:container-fluid md:mx-auto sm:mx-auto">
       <div className="my-2 px-4 py-[2rem]">
-        <Typography
-          placeholder={undefined}
-          variant="h2"
-          color="black"
-          className="font-poppins font-bold tracking-tight"
-        >
+        <Typography placeholder={undefined} variant="h2" color="black" className="font-poppins font-bold tracking-tight">
           Assert <span className="text-emerald"> ownership </span> over your
           <span className="text-emerald"> Wallet </span> data
         </Typography>
       </div>
-      <div className="grid lg:grid-cols-3 gap-4 sm:grid-cols-1">
-        <div>
+      <div className="grid grid-flow-col grid-rows-3 gap-x-6 gap-y-6 mx-[3rem] px-6 sm:grid-flow-row sm:auto-cols-max md:grid-flow-col">
+        <div className="col-span-1">
           <Card placeholder={undefined} className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none">
             <CardBody placeholder={undefined} className="text-center mx-[2rem]">
               <Typography
-                placeholder={undefined}
+              placeholder={undefined}
                 variant="h5"
                 color="white"
                 className="mb-4 font-poppins font-normal"
@@ -37,7 +33,7 @@ const Grid = () => {
                 <span className="text-emerald"> Versatile Cards </span>Use
               </Typography>
               <Typography
-                placeholder={undefined}
+              placeholder={undefined}
                 variant="small"
                 color="white"
                 className="font-normal text-justify font-poppins"
@@ -56,11 +52,11 @@ const Grid = () => {
             </CardFooter>
           </Card>
         </div>
-        <div>
+        <div className="col-span-1 row-span-2">
           <Card placeholder={undefined} className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none">
             <CardBody placeholder={undefined} className="text-center mx-[2rem]">
               <Typography
-                placeholder={undefined}
+              placeholder={undefined}
                 variant="h5"
                 color="white"
                 className="mb-4 font-poppins font-normal"
@@ -68,7 +64,7 @@ const Grid = () => {
                 <span className="text-emerald"> Private-Key </span> Owner
               </Typography>
               <Typography
-                placeholder={undefined}
+              placeholder={undefined}
                 variant="small"
                 color="white"
                 className="font-normal text-justify font-poppins"
@@ -86,11 +82,11 @@ const Grid = () => {
             </CardFooter>
           </Card>
         </div>
-        <div>
-          <Card placeholder={undefined} className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none">
+        <div className="col-span-2">
+          <Card  placeholder={undefined} className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none">
             <CardBody placeholder={undefined} className="text-center mx-[2rem]">
               <Typography
-                placeholder={undefined}
+              placeholder={undefined}
                 variant="h5"
                 color="white"
                 className="mb-4 font-poppins font-normal"
@@ -106,7 +102,7 @@ const Grid = () => {
             </CardBody>
             <CardFooter placeholder={undefined} className="text-center mx-[2rem]">
               <Typography
-                placeholder={undefined}
+              placeholder={undefined}
                 variant="small"
                 color="white"
                 className="font-normal text-justify font-poppins"
@@ -120,11 +116,11 @@ const Grid = () => {
             </CardFooter>
           </Card>
         </div>
-        <div>
+        <div className="col-span-2 row-span-2">
           <Card placeholder={undefined} className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none">
             <CardBody placeholder={undefined} className="px-8 pt-6 pb-8 text-center">
               <Typography
-                placeholder={undefined}
+              placeholder={undefined}
                 variant="h5"
                 color="white"
                 className="font-poppins font-normal mb-4"
@@ -136,8 +132,8 @@ const Grid = () => {
                 alt="card-image"
                 className="mb-4 w-40 h-auto m-auto"
               />
-              <Typography
-                placeholder={undefined}
+               <Typography
+               placeholder={undefined}
                 variant="small"
                 color="white"
                 className="font-normal tracking-tight text-justify font-poppins mx-[2rem]"
@@ -147,42 +143,51 @@ const Grid = () => {
                 may have
               </Typography>
             </CardBody>
+         
           </Card>
         </div>
-        <div>
-          <Card placeholder={undefined} className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none">
-            <CardBody placeholder={undefined} className="text-center mx-[2rem]">
-              <Typography
+        <div className="row-span-3">
+          <Card placeholder={undefined} className="w-full max-w-[22rem] h-[65%] bg-[#1B1C20] rounded-[25px] shadow-none">
+              <CardHeader
+              placeholder={undefined}
+                shadow={false}
+                floated={false}
+                className=" h-10 bg-[#1B1C20]"
+              >
+                <Typography
                 placeholder={undefined}
                 variant="h5"
                 color="white"
-                className="mb-4 font-poppins font-normal"
-              >
-                Manage
-                <span className="text-emerald"> Effortlessly </span>
-              </Typography>
-              <img
-                src={pic5}
-                alt="card-image"
-                className="w-20 h-auto m-auto"
-              />
-            </CardBody>
-            <CardFooter placeholder={undefined} className="text-center mx-[2rem]">
-              <Typography
+                className="font-poppins font-normal mt-4"
+              > Manage
+                  <span className="text-emerald"> Effortlessly </span>
+                </Typography>
+              </CardHeader>
+              <CardBody placeholder={undefined} className="text-justify mx-[2rem] mt-5">
+                <Typography
                 placeholder={undefined}
-                variant="small"
-                color="white"
-                className="font-normal text-justify font-poppins"
-              >
-                <span className="text-emerald">Leyyer Wallet</span> allows you
-              to manage your{" "}
-              <span className="text-emerald"> digital assets</span> with ease
-              </Typography>
-            </CardFooter>
+                  variant="small"
+                  color="white"
+                  className="font-normal font-poppins"
+                >
+                  <span className="text-emerald">Leyyer Wallet</span> allows you
+                  to manage your{" "}
+                  <span className="text-emerald"> digital assets</span> with
+                  ease
+                </Typography>
+              </CardBody>
+              <CardFooter placeholder={undefined} className="text-center mx-[2rem]">
+                <img
+                  src={pic5}
+                  alt="card-image"
+                  className="pt-10"
+                />
+              </CardFooter>
+           
           </Card>
         </div>
-        </div>
       </div>
+    </div>
   );
 };
 

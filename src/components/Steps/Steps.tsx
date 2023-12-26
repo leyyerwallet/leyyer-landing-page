@@ -10,12 +10,12 @@ import pic3 from '../../assets/icons/wallet.png';
 
 const Steps = () => {
   return (
-    <div className="py-[5rem] px-[6rem] text-center">
+    <div className="py-[5rem] px-[3rem] text-center">
       <Typography placeholder={undefined} variant="h2" color="black" className="font-poppins leading-loose">
         Follow the steps to Get Started
       </Typography>
       <Typography placeholder={undefined} variant="h4" className="font-poppins text-gray-400 font-medium mt-4">
-        Here are a few reasons why you should choose Coin
+      Here is the step-by-step process how you can use Leyyer
       </Typography>
       <div className="grid lg:grid-cols-3 gap-4 bg-white justify-center m-6 pt-8 sm:grid-cols-1">
         <div className="flex flex-col items-center">

@@ -123,7 +123,11 @@ body, .cd__main {
     visibility: hidden;
   }
 }
-
+@media (min-width: 342px) {
+  .carousel {
+    max-width: 20rem; /* Adjust as necessary */
+  }
+}
 @keyframes carousel-animate-vertical {
   0% {
     transform: translateY(100%) scale(0.5);

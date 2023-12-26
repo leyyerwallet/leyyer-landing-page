@@ -205,10 +205,10 @@ const NavbarMenu = () =>  {
         </div>
         <div className="hidden gap-2 lg:flex">
           <Button placeholder={undefined} variant="outlined" size="sm" className="text-emerald border-emerald normal-case">
-           Sign Up
+          Sign-Up 
           </Button>
           <Button placeholder={undefined} variant="filled" size="sm" className="text-white bg-emerald normal-case">
-           Access Wallet
+           DEMO Wallet
           </Button>
        
         </div>
@@ -229,10 +229,10 @@ const NavbarMenu = () =>  {
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
           <Button placeholder={undefined} variant="outlined" size="sm" className="text-emerald border-emerald normal-case" fullWidth>
-          Sign Up
+          Sign-Up
           </Button>
           <Button placeholder={undefined} variant="filled" size="sm" fullWidth className="text-white bg-emerald normal-case">
-          Access Wallet
+          DEMO Wallet
           </Button>
         </div>
       </Collapse>
