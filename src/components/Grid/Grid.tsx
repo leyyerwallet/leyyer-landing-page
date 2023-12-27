@@ -24,14 +24,16 @@ const Grid = () => {
         <div className="col-span-1">
           <Card placeholder={undefined} className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none">
             <CardBody placeholder={undefined} className="text-center mx-[2rem]">
-              <Typography placeholder={undefined}
+              <Typography
+              placeholder={undefined}
                 variant="h5"
                 color="white"
                 className="mb-4 font-poppins font-normal"
               >
                 <span className="text-emerald"> Versatile Cards </span>Use
               </Typography>
-              <Typography placeholder={undefined}
+              <Typography
+              placeholder={undefined}
                 variant="small"
                 color="white"
                 className="font-normal text-justify font-poppins"
@@ -53,14 +55,16 @@ const Grid = () => {
         <div className="col-span-1 row-span-2">
           <Card placeholder={undefined} className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none">
             <CardBody placeholder={undefined} className="text-center mx-[2rem]">
-              <Typography placeholder={undefined}
+              <Typography
+              placeholder={undefined}
                 variant="h5"
                 color="white"
                 className="mb-4 font-poppins font-normal"
               >
                 <span className="text-emerald"> Private-Key </span> Owner
               </Typography>
-              <Typography placeholder={undefined}
+              <Typography
+              placeholder={undefined}
                 variant="small"
                 color="white"
                 className="font-normal text-justify font-poppins"
@@ -79,9 +83,10 @@ const Grid = () => {
           </Card>
         </div>
         <div className="col-span-2">
-          <Card placeholder={undefined} className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none">
+          <Card  placeholder={undefined} className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none">
             <CardBody placeholder={undefined} className="text-center mx-[2rem]">
-              <Typography placeholder={undefined}
+              <Typography
+              placeholder={undefined}
                 variant="h5"
                 color="white"
                 className="mb-4 font-poppins font-normal"
@@ -96,7 +101,8 @@ const Grid = () => {
               />
             </CardBody>
             <CardFooter placeholder={undefined} className="text-center mx-[2rem]">
-              <Typography placeholder={undefined}
+              <Typography
+              placeholder={undefined}
                 variant="small"
                 color="white"
                 className="font-normal text-justify font-poppins"
@@ -113,7 +119,8 @@ const Grid = () => {
         <div className="col-span-2 row-span-2">
           <Card placeholder={undefined} className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none">
             <CardBody placeholder={undefined} className="px-8 pt-6 pb-8 text-center">
-              <Typography placeholder={undefined}
+              <Typography
+              placeholder={undefined}
                 variant="h5"
                 color="white"
                 className="font-poppins font-normal mb-4"
@@ -125,7 +132,8 @@ const Grid = () => {
                 alt="card-image"
                 className="mb-4 w-40 h-auto m-auto"
               />
-               <Typography placeholder={undefined}
+               <Typography
+               placeholder={undefined}
                 variant="small"
                 color="white"
                 className="font-normal tracking-tight text-justify font-poppins mx-[2rem]"
@@ -140,12 +148,14 @@ const Grid = () => {
         </div>
         <div className="row-span-3">
           <Card placeholder={undefined} className="w-full max-w-[22rem] h-[65%] bg-[#1B1C20] rounded-[25px] shadow-none">
-              <CardHeader placeholder={undefined}
+              <CardHeader
+              placeholder={undefined}
                 shadow={false}
                 floated={false}
                 className=" h-10 bg-[#1B1C20]"
               >
-                <Typography placeholder={undefined}
+                <Typography
+                placeholder={undefined}
                 variant="h5"
                 color="white"
                 className="font-poppins font-normal mt-4"
@@ -154,7 +164,8 @@ const Grid = () => {
                 </Typography>
               </CardHeader>
               <CardBody placeholder={undefined} className="text-justify mx-[2rem] mt-5">
-                <Typography placeholder={undefined}
+                <Typography
+                placeholder={undefined}
                   variant="small"
                   color="white"
                   className="font-normal font-poppins"

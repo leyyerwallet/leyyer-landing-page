@@ -3,7 +3,7 @@ import logo from "../../assets/logo-footer.png";
 const LINKS = [
   {
     title: "Company",
-    items: ["About us", "Blog", "Security", "Press Kit"],
+    items: ["About us", "Blog", "Security", "Press Kit"], 
   },
   {
     title: "Wallet",
@@ -11,18 +11,18 @@ const LINKS = [
   },
   {
     title: "Support",
-    items: ["Help Center", "Community", "COntact us", "Available Crypto"],
+    items: ["Help Center", "Community", "Cntact us", "Available Crypto"],
   },
   {
     title: "Legal",
     items: ["Privacy Policy", "Cookies Policy", "Terms & Conditions"],
   },
-];
+]; 
 
 const Footer = () => {
   return (
-    <footer className="relative w-full pt-10">
-      <div className="mx-auto w-full max-w-7xl px-8">
+    <footer className="relative w-auto py-12 m-[5rem]">
+      <div className="pl-auto  w-7xl ">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2 sm:grid-cols-1">
           <div className="grid lg:grid-rows-6 grid-flow-col gap-2 sm:grid-rows-2">
             <div className="mb-0">
@@ -51,7 +51,7 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="#"
+                href="https://instagram.com/leyyerwallet"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -70,7 +70,7 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="#"
+                href="https://twitter.com/leyyerwallet"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -85,7 +85,7 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="#"
+                href="https://github.com/leyyerwallet"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -104,7 +104,7 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="#"
+                href="https://t.me/leyyerwallet"         
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -123,12 +123,6 @@ const Footer = () => {
             </div>
             <div></div>
             <div></div>
-
-            <div className="text-left">
-              <Typography placeholder={undefined} color="blue-gray" className="font-normal">
-                &copy; 2023 Material Tailwind
-              </Typography>
-            </div>
           </div>
           <div className="grid grid-cols-3 justify-between text-left">
             {LINKS.map(({ title, items }) => (
@@ -155,7 +149,12 @@ const Footer = () => {
                 ))}
               </ul>
             ))}
+            
           </div>
+
+        </div>
+        <div className="mt-8 text-center">
+          <Typography placeholder={undefined}>&copy; 2023 Leyer Tech OÜ</Typography>
         </div>
       </div>
     </footer>
