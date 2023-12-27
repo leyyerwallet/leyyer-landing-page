@@ -3,7 +3,7 @@ import logo from "../../assets/logo-footer.png";
 const LINKS = [
   {
     title: "Company",
-    items: ["About us", "Blog", "Security", "Press Kit"],
+    items: ["About us", "Blog", "Security", "Press Kit"], 
   },
   {
     title: "Wallet",
