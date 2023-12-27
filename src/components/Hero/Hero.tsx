@@ -8,7 +8,7 @@ import pic2 from '../../assets/app-mockup.png';
 
 const Hero = () => {
   return (
-      <div className="bg-white m-[2rem]">
+      <div className="bg-white m-[1rem]">
         <div className="relative isolate px-6 lg:px-8">
           <div className="mx-auto sm:py-48 lg:py-[2rem]">
 
@@ -90,7 +90,7 @@ const Hero = () => {
            */}
 
           <div className="wrapper">
-            <Typography placeholder={undefined} variant="h2" color="black" className="2xl m-5 mt-20 font-poppins font-bold"> Available Devices </Typography>
+            <Typography placeholder={undefined} variant="h2" color="black" className="2xl m-3 mt-20 font-poppins font-bold"> Available Devices </Typography>
             <div className="carousel">
               <div className="carousel__item">
                 <div className="carousel__item-body">
