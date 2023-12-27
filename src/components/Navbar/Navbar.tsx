@@ -197,7 +197,7 @@ const NavbarMenu = () =>  {
   }, []);
  
   return (
-    <Navbar placeholder={undefined} className="container-fluid py-10 shadow-none px-[7rem]" fullWidth={true}>
+    <Navbar placeholder={undefined} className="container-fluid py-8 shadow-none px-[7rem]" fullWidth={true}>
       <div className="flex items-center justify-between text-blue-gray-900">
         <img src ={logo} className="w-40 h-auto" />
         <div className="hidden lg:block">
@@ -205,10 +205,10 @@ const NavbarMenu = () =>  {
         </div>
         <div className="hidden gap-2 lg:flex">
           <Button placeholder={undefined} variant="outlined" size="sm" className="text-emerald border-emerald normal-case">
-           Sign Up
+          Sign-Up 
           </Button>
           <Button placeholder={undefined} variant="filled" size="sm" className="text-white bg-emerald normal-case">
-           Access Wallet
+             Demo Wallet
           </Button>
        
         </div>
@@ -229,10 +229,10 @@ const NavbarMenu = () =>  {
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
           <Button placeholder={undefined} variant="outlined" size="sm" className="text-emerald border-emerald normal-case" fullWidth>
-          Sign Up
+          Sign-Up
           </Button>
           <Button placeholder={undefined} variant="filled" size="sm" fullWidth className="text-white bg-emerald normal-case">
-          Access Wallet
+            Demo Wallet
           </Button>
         </div>
       </Collapse>

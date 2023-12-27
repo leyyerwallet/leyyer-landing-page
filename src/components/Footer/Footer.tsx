@@ -10,8 +10,8 @@ const LINKS = [
     items: ["Buy Crypto", "Sell Crypto", "NFTs", "Learn to Earn"],
   },
   {
-    title: "Support", 
-    items: ["Help Center", "Community", "COntact us", "Available Crypto"],
+    title: "Support",
+    items: ["Help Center", "Community", "Contact us", "Available Crypto"],
   },
   {
     title: "Legal",
