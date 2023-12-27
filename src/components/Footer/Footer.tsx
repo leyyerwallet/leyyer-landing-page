@@ -17,7 +17,7 @@ const LINKS = [
     title: "Legal",
     items: ["Privacy Policy", "Cookies Policy", "Terms & Conditions"],
   },
-];
+]; 
 
 const Footer = () => {
   return (
