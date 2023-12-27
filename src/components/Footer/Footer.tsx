@@ -21,7 +21,7 @@ const LINKS = [
 
 const Footer = () => {
   return (
-    <footer className="relative w-full pt-10">
+    <footer className="relative w-auto py-12 m-[5rem]">
       <div className="pl-auto  w-7xl ">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2 sm:grid-cols-1">
           <div className="grid lg:grid-rows-6 grid-flow-col gap-2 sm:grid-rows-2">
@@ -123,12 +123,6 @@ const Footer = () => {
             </div>
             <div></div>
             <div></div>
-
-            <div className="text-left">
-              <Typography placeholder={undefined} color="blue-gray" className="font-normal">
-                &copy; 2023 Leyer Tech OÜ
-              </Typography>
-            </div>
           </div>
           <div className="grid grid-cols-3 justify-between text-left">
             {LINKS.map(({ title, items }) => (
@@ -155,7 +149,12 @@ const Footer = () => {
                 ))}
               </ul>
             ))}
+            
           </div>
+
+        </div>
+        <div className="mt-8 text-center">
+          <Typography placeholder={undefined}>&copy; 2023 Leyer Tech OÜ</Typography>
         </div>
       </div>
     </footer>
