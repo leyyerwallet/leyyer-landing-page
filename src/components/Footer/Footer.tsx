@@ -11,7 +11,7 @@ const LINKS = [
   },
   {
     title: "Support",
-    items: ["Help Center", "Community", "Cntact us", "Available Crypto"],
+    items: ["Help Center", "Community", "Contact us", "Available Crypto"],
   },
   {
     title: "Legal",
@@ -22,7 +22,7 @@ const LINKS = [
 const Footer = () => {
   return (
     <footer className="relative w-full pt-10">
-      <div className="pl-auto  w-7xl ">
+      <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2 sm:grid-cols-1">
           <div className="grid lg:grid-rows-6 grid-flow-col gap-2 sm:grid-rows-2">
             <div className="mb-0">
@@ -51,7 +51,7 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="https://instagram.com/leyyerwallet"
+                href="#"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -70,7 +70,7 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="https://twitter.com/leyyerwallet"
+                href="#"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -85,7 +85,7 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="https://github.com/leyyerwallet"
+                href="#"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -104,7 +104,7 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="https://t.me/leyyerwallet"         
+                href="#"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -126,7 +126,7 @@ const Footer = () => {
 
             <div className="text-left">
               <Typography placeholder={undefined} color="blue-gray" className="font-normal">
-                &copy; 2023 Leyer Tech OÜ
+                &copy; 2023 Material Tailwind
               </Typography>
             </div>
           </div>
