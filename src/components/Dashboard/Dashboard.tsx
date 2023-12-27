@@ -4,7 +4,7 @@ import preview from '../../assets/preview.png';
 import pic2 from '../../assets/app-mockup.png';
 
 const Dashboard = () => {
-  return (
+  return ( 
     <div className="bg-white p-4 md:px-[6rem]">
       <div className="isolate md:px-10 lg:px-8">
         <div className="lg:py-[2rem] sm:py-8 2xl:py-0">

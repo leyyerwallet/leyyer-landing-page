@@ -117,7 +117,7 @@ function NavListMenu2() {
       <Menu
         open={isMenuOpen}
         handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
+        offset={{ mainAxis: 20 }} 
         placement="bottom"
         allowHover={true}
       >
