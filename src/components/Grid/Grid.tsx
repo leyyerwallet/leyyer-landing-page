@@ -74,7 +74,7 @@ const Grid = () => {
                 src={pic2}
                 alt="card-image"
                 className="w-20 h-auto mx-auto"
-              />
+              /> 
             </CardFooter>
           </Card>
         </div>

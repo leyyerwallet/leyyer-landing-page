@@ -6,7 +6,7 @@ const Cards = () => {
       <div className="py-2 text-left m-6">
         <h2 className="lg:text-5xl font-bold font-poppins tracking-tight text-gray-900 sm:text-5xl ">
           Crypto Cards
-        </h2>
+        </h2> 
       </div>
       <div className="grid grid-cols-2 gap-4 rounded-[40px] bg-[#00D39529]/20 bg-center">
         <div className="m-[3rem] text-left">

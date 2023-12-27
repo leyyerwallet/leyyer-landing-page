@@ -16,7 +16,7 @@ const Welcome = () => {
       </div>
     </div>
     <div className="min-h-[70vh] flex flex-col md:flex-row md:justify-between items-center md:mx-32 mx-5 mt-10">
-    <div className="flex-auto">
+    <div className="flex-auto"> 
         <img src={"src/assets/Layyer-Wallet-App-Mockup-1.png"} />
       </div>
       <div className="flex-auto md:w-2/4 text-center">

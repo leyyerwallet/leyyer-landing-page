@@ -13,7 +13,7 @@ const Hero = () => {
                 placeholder={undefined}
                 variant="h1"
                 color="black"
-                className="font-poppins text-[48px] leading-[60px]  font-[900] text-gray-900 sm:text-6xl"
+                 className="font-poppins text-[48px] leading-[60px]  font-[900] text-gray-900 sm:text-6xl"
               >
                 Non-custodial <br /> Super Wallet App
               </Typography>
