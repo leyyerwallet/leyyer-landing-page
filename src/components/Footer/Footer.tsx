@@ -32,7 +32,8 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="#"
+                href="https://facebook.com/leyyerwallet"
+                target="_blank"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -51,7 +52,8 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="#"
+                href="https://instagram.com/leyyerwallet"
+                target="_blank"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -70,7 +72,8 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="#"
+                href="https://twitter.com/leyyerwallet"
+                target="_blank"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -85,7 +88,8 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="#"
+                href="https://github.com/leyyerwallet"
+                target="_blank"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -104,7 +108,8 @@ const Footer = () => {
               <Typography
                 placeholder={undefined}
                 as="a"
-                href="#"
+                href="https://t.me/leyyerwallet"
+                target="_blank"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
