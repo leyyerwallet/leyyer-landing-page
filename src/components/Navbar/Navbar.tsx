@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useState } from 'react';
+import emailjs from 'emailjs-com';
 import {
   Navbar,
   Collapse,
@@ -186,27 +187,66 @@ function NavList() {
   );
 }
  
-const NavbarMenu = () =>  {
-  const [openNav, setOpenNav] = React.useState(false);
+const NavbarMenu = () => {
+  const [openNav, setOpenNav] = useState(false);
+  const [showForm, setShowForm] = useState(false);  // State to control form visibility
+  const form = useRef();
 
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false),
-    );
-  }, []);
- 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    
+    // Ensure to replace placeholders below with your actual EmailJS details
+    emailjs.sendForm('service_9gc4oee', 'template_a54szlf', form.current, 'pFuS6DzkRF7vqH-Gd')
+      .then((result) => {
+          console.log(result.text);
+          setShowForm(false);  // Close the form after successful submission
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <Navbar placeholder={undefined} className="container-fluid py-8 shadow-none px-[7rem]" fullWidth={true}>
       <div className="flex items-center justify-between text-blue-gray-900">
-        <img src ={logo} className="w-40 h-auto" />
+        <img src={logo} className="w-40 h-auto" alt="Logo" />
         <div className="hidden lg:block">
           <NavList />
         </div>
         <div className="hidden gap-2 lg:flex">
-          <Button placeholder={undefined} variant="outlined" size="sm" className="text-emerald border-emerald normal-case">
+        <Button 
+          placeholder={undefined} 
+          variant="outlined" 
+          size="sm" 
+          className="text-emerald border-emerald normal-case"
+          onClick={() => setShowForm(true)}  // Show the form modal on button click
+        >
           Sign-Up 
-          </Button>
+        </Button>
+
+        {showForm && (
+          <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white p-8 rounded-md shadow-md">
+              <h2 className="text-xl font-semibold mb-4">Sign Up</h2>
+              <form ref={form} onSubmit={sendEmail}>
+                <div className="mb-4">
+                  <label>Full Name</label>
+                  <input type="text" name="user_name" required className="w-full p-2 border rounded-md" />
+                </div>
+                <div className="mb-4">
+                  <label>Email</label>
+                  <input type="email" name="user_email" required className="w-full p-2 border rounded-md" />
+                </div>
+                <div className="mb-4">
+                  <label>Message</label>
+                  <textarea name="message" required className="w-full p-2 border rounded-md"></textarea>
+                </div>
+                <button type="submit" className="bg-emerald text-white py-2 px-4 rounded-md">Submit</button>
+                <button onClick={() => setShowForm(false)} className="ml-2 py-2 px-4">Close</button>
+              </form>
+            </div>
+          </div>
+        )}
+
           <Button placeholder={undefined} variant="filled" size="sm" className="text-white bg-emerald normal-case">
              Demo Wallet
           </Button>
