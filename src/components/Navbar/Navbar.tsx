@@ -24,7 +24,6 @@ const navListMenuItems = [
 const navListMenuItems2 = [
   "Staking", "Convert" , "Swap"
 ];
-
 function NavListMenu1() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -90,7 +89,6 @@ function NavListMenu1() {
     </React.Fragment>
   );
 }
-
 function NavListMenu2() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -185,8 +183,8 @@ function NavList() {
     </List>
   );
 }
- 
-const NavbarMenu = () =>  {
+
+const NavbarMenu = () => {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -195,7 +193,7 @@ const NavbarMenu = () =>  {
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
- 
+
   return (
     <Navbar placeholder={undefined} className="container-fluid py-8 shadow-none px-[7rem]" fullWidth={true}>
       <div className="flex items-center justify-between text-blue-gray-900">
@@ -206,7 +204,7 @@ const NavbarMenu = () =>  {
         <div className="hidden gap-2 lg:flex">
           <Button placeholder={undefined} variant="outlined" size="sm" className="text-emerald border-emerald normal-case">
           Sign-Up 
-          </Button>
+        </Button>
           <Button placeholder={undefined} variant="filled" size="sm" className="text-white bg-emerald normal-case">
              Demo Wallet
           </Button>
