@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import SignupForm from "./SignUpForm";
 import {
   Navbar,
   Collapse,
@@ -18,12 +19,11 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-const navListMenuItems = [
-  "Blog", "Support" , "FAQs", "Community"
-];
-const navListMenuItems2 = [
-  "Staking", "Convert" , "Swap"
-];
+
+const navListMenuItems = ["Blog", "Support", "FAQs", "Community"];
+const navListMenuItems2 = ["Staking", "Convert", "Swap"];
+
+
 function NavListMenu1() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -185,32 +185,64 @@ function NavList() {
 }
 
 const NavbarMenu = () => {
-  const [openNav, setOpenNav] = React.useState(false);
+  const [openNav, setOpenNav] = useState(false);
+  const [showSignupForm, setShowSignupForm] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
 
+  const toggleSignupForm = () => {
+    setShowSignupForm(prevState => !prevState);
+  };
+  const closeSignupForm = () => {
+    setShowSignupForm(false);  
+  };
+
+
   return (
-    <Navbar placeholder={undefined} className="container-fluid py-8 shadow-none px-[7rem]" fullWidth={true}>
+    <Navbar
+      placeholder={undefined}
+      className="container-fluid py-8 shadow-none px-[7rem]"
+      fullWidth={true}
+    >
       <div className="flex items-center justify-between text-blue-gray-900">
-        <img src ={logo} className="w-40 h-auto" />
+        <img src={logo} className="w-40 h-auto" />
+        
         <div className="hidden lg:block">
           <NavList />
         </div>
+        
         <div className="hidden gap-2 lg:flex">
-          <Button placeholder={undefined} variant="outlined" size="sm" className="text-emerald border-emerald normal-case">
-          Sign-Up 
-        </Button>
-          <Button placeholder={undefined} variant="filled" size="sm" className="text-white bg-emerald normal-case">
-             Demo Wallet
+          {showSignupForm ? (
+            <SignupForm setShowSignupForm={setShowSignupForm} />
+          ) : (
+            <Button
+              placeholder={undefined}
+              variant="outlined"
+              size="sm"
+              className="text-emerald border-emerald normal-case"
+              onClick={toggleSignupForm} 
+            >
+              Sign-Up
+            </Button>
+          )}
+  
+          <Button
+            placeholder={undefined}
+            variant="filled"
+            size="sm"
+            className="text-white bg-emerald normal-case"
+          >
+            Demo Wallet
           </Button>
-       
         </div>
-        <IconButton placeholder={undefined}
+        
+        <IconButton
+          placeholder={undefined}
           variant="text"
           color="blue-gray"
           className="lg:hidden"
@@ -223,18 +255,101 @@ const NavbarMenu = () => {
           )}
         </IconButton>
       </div>
+  
       <Collapse open={openNav}>
         <NavList />
+        
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button placeholder={undefined} variant="outlined" size="sm" className="text-emerald border-emerald normal-case" fullWidth>
-          Sign-Up
+          <Button
+            placeholder={undefined}
+            variant="outlined"
+            size="sm"
+            className="text-emerald border-emerald normal-case"
+            fullWidth
+            onClick={() => setShowSignupForm(true)}
+          >
+            Sign-Up
           </Button>
-          <Button placeholder={undefined} variant="filled" size="sm" fullWidth className="text-white bg-emerald normal-case">
+          
+          <Button
+            placeholder={undefined}
+            variant="filled"
+            size="sm"
+            fullWidth
+            className="text-white bg-emerald normal-case"
+          >
             Demo Wallet
           </Button>
         </div>
       </Collapse>
+  
+      {showSignupForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
+          <div className="bg-white rounded-md p-6 max-w-md w-full z-50"> {/* Adjusted z-index here */}
+            {/* Signup form code */}
+            <form className="flex flex-col items-center">
+              <div className="mb-4 w-full">
+                <label
+                  htmlFor="fullName"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="fullName"
+                  className="mt-1 p-2 border rounded-md w-full"
+                  required
+                />
+              </div>
+              <div className="mb-4 w-full">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="mt-1 p-2 border rounded-md w-full"
+                  required
+                />
+              </div>
+              <div className="mb-4 w-full">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  className="mt-1 p-2 border rounded-md w-full"
+                    rows={4}
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="bg-emerald text-white px-4 py-2 rounded-md hover:bg-emerald-dark"
+              >
+                Request Early Access
+              </button>
+              <button
+                type="button"
+                className="bg-gray-300 text-gray-700 ml-2 px-4 py-2 rounded-md hover:bg-gray-400"
+                onClick={closeSignupForm}
+              >
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </Navbar>
   );
-}
-export default NavbarMenu
+  
+};
+
+export default NavbarMenu;
