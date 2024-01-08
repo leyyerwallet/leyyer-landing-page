@@ -28,13 +28,14 @@ const Hero = (props) => {
 
             {/* Grid container for the two main columns */}
             <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
-              {props.showSignupForm ? (
+              {props.showSignUp ? (
                   <Modal
-                      open={true}
+                      open={props.showSignUp}
+                      onClose={() => !props.showSignUp}
                       aria-labelledby="modal-modal-title"
                       aria-describedby="modal-modal-description"
                   >
-                    <SignupForm />
+                    <SignupForm handleSignUp={props.handleSignUp} />
                   </Modal>
               ) : ''
               }

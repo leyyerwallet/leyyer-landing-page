@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect, forwardRef, ForwardedRef, useRef, useImperativeHandle} from "react";
 import SignupForm from "./SignUpForm";
 import {
   Navbar,
@@ -19,6 +19,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import NavbarMenuRef from "../interface/NavbarMenuRef.tsx";
 
 const navListMenuItems = ["Blog", "Support", "FAQs", "Community"];
 const navListMenuItems2 = ["Staking", "Convert", "Swap"];
@@ -186,7 +187,6 @@ function NavList() {
 
 const NavbarMenu = (props) => {
   const [openNav, setOpenNav] = useState(false);
-  const [showSignupForm, setShowSignupForm] = useState(false);
 
   useEffect(() => {
     window.addEventListener(
@@ -194,16 +194,6 @@ const NavbarMenu = (props) => {
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
-
-  const toggleSignupForm = () => {
-    setShowSignupForm(prevState => !prevState);
-    props.toggleSignupForm(showSignupForm);
-  };
-  const closeSignupForm = () => {
-    setShowSignupForm(false);
-    props.toggleSignupForm(false);
-  };
-
 
   return (
     <Navbar
@@ -224,7 +214,8 @@ const NavbarMenu = (props) => {
               variant="outlined"
               size="sm"
               className="text-emerald border-emerald normal-case"
-              onClick={toggleSignupForm} 
+              onClick={props.handleSignUp}
+              ref={props.signUpButtonRef}
             >
               Sign-Up
             </Button>
@@ -264,7 +255,8 @@ const NavbarMenu = (props) => {
             size="sm"
             className="text-emerald border-emerald normal-case"
             fullWidth
-            onClick={() => setShowSignupForm(true)}
+            ref={props.signUpButtonRef}
+            onClick={props.handleSignUp}
           >
             Sign-Up
           </Button>
@@ -284,7 +276,6 @@ const NavbarMenu = (props) => {
 
     </Navbar>
   );
-  
 };
 
 export default NavbarMenu;

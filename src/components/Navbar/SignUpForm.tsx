@@ -1,7 +1,7 @@
 import emailjs from 'emailjs-com';
 
 
-const SignupForm = ({ setShowSignupForm }: { setShowSignupForm: React.Dispatch<React.SetStateAction<boolean>> }) => {
+const SignupForm = (props) => {
   
 const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -9,7 +9,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     emailjs.sendForm('service_9gc4oee', 'template_a54szlf', e.target as HTMLFormElement, 'pFuS6DzkRF7vqH-Gd')
       .then((result) => {
         console.log('Email sent successfully:', result.text);
-        setShowSignupForm(false); // close the form
+        () => props.handleSignUp;
       }, (error) => {
         console.log('Error sending email:', error.text);
       });
@@ -31,8 +31,10 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
             <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
             <textarea id="message" name="message" className="mt-1 p-2 border rounded-md w-full" rows={4} required></textarea>
           </div>
+            <div className="flex w-full justify-around">
           <button type="submit" className="bg-emerald text-white px-4 py-2 rounded-md hover:bg-emerald-dark">Request Early Access</button>
-          <button type="button" onClick={() => setShowSignupForm(false)} className="bg-gray-300 text-gray-700 ml-2 px-4 py-2 rounded-md hover:bg-gray-400">Close</button>
+          <button type="button" onClick={props.handleSignUp} className="bg-gray-300 text-gray-700 ml-2 px-4 py-2 rounded-md hover:bg-gray-400">Close</button>
+            </div>
         </form>
       </div>
     </div>

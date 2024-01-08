@@ -6,18 +6,20 @@ import Steps from './components/Steps/Steps'
 import Grid from './components/Grid/Grid'
 import Links from './components/Links/Links'
 import Footer  from './components/Footer/Footer'
-import {useState} from "react";
+import {useRef, useState} from "react";
 function App() {
 
-  const [showSignupForm, setShowSignupForm] = useState(false);
-  const handleSignupFormValue = (value) => {
-    setShowSignupForm(value);
-  };
+  const signUpButtonRef = useRef(null);
+  const [showSignUp, setShowSignUp] = useState(false);
+
+  const handleSignUp = () => {
+    setShowSignUp(prevState => !prevState);
+  }
 
   return (
     <div>
-    <NavbarMenu toggleSignupForm={handleSignupFormValue}/>
-    <Hero showSignupForm={showSignupForm}/>
+    <NavbarMenu handleSignUp = {handleSignUp} signUpButtonRef = {signUpButtonRef}/>
+    <Hero showSignUp = {showSignUp} handleSignUp={handleSignUp}/>
     <Cards />
     <Grid />
     <Steps />
