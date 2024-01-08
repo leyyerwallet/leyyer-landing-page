@@ -184,7 +184,7 @@ function NavList() {
   );
 }
 
-const NavbarMenu = () => {
+const NavbarMenu = (props) => {
   const [openNav, setOpenNav] = useState(false);
   const [showSignupForm, setShowSignupForm] = useState(false);
 
@@ -197,9 +197,11 @@ const NavbarMenu = () => {
 
   const toggleSignupForm = () => {
     setShowSignupForm(prevState => !prevState);
+    props.toggleSignupForm(showSignupForm);
   };
   const closeSignupForm = () => {
-    setShowSignupForm(false);  
+    setShowSignupForm(false);
+    props.toggleSignupForm(false);
   };
 
 
@@ -217,9 +219,6 @@ const NavbarMenu = () => {
         </div>
         
         <div className="hidden gap-2 lg:flex">
-          {showSignupForm ? (
-            <SignupForm setShowSignupForm={setShowSignupForm} />
-          ) : (
             <Button
               placeholder={undefined}
               variant="outlined"
@@ -229,7 +228,6 @@ const NavbarMenu = () => {
             >
               Sign-Up
             </Button>
-          )}
   
           <Button
             placeholder={undefined}
@@ -283,70 +281,7 @@ const NavbarMenu = () => {
         </div>
       </Collapse>
   
-      {showSignupForm && (
-        <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
-          <div className="bg-white rounded-md p-6 max-w-md w-full z-50"> {/* Adjusted z-index here */}
-            {/* Signup form code */}
-            <form className="flex flex-col items-center">
-              <div className="mb-4 w-full">
-                <label
-                  htmlFor="fullName"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="fullName"
-                  className="mt-1 p-2 border rounded-md w-full"
-                  required
-                />
-              </div>
-              <div className="mb-4 w-full">
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="mt-1 p-2 border rounded-md w-full"
-                  required
-                />
-              </div>
-              <div className="mb-4 w-full">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  className="mt-1 p-2 border rounded-md w-full"
-                    rows={4}
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="bg-emerald text-white px-4 py-2 rounded-md hover:bg-emerald-dark"
-              >
-                Request Early Access
-              </button>
-              <button
-                type="button"
-                className="bg-gray-300 text-gray-700 ml-2 px-4 py-2 rounded-md hover:bg-gray-400"
-                onClick={closeSignupForm}
-              >
-                Close
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
+
     </Navbar>
   );
   

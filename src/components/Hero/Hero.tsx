@@ -5,8 +5,22 @@ import google_play from '../../assets/app-stores/google-play.png';
 import web from '../../assets/app-stores/chrome-web.png';
 import pic1 from '../../assets/preview.png';
 import pic2 from '../../assets/app-mockup.png';
+import Modal from '@mui/material/Modal';
+import SignupForm from "../Navbar/SignUpForm.tsx";
 
-const Hero = () => {
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
+const Hero = (props) => {
   return (
       <div className="bg-white m-[1rem]">
         <div className="relative isolate px-6 lg:px-8">
@@ -14,6 +28,16 @@ const Hero = () => {
 
             {/* Grid container for the two main columns */}
             <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
+              {props.showSignupForm ? (
+                  <Modal
+                      open={true}
+                      aria-labelledby="modal-modal-title"
+                      aria-describedby="modal-modal-description"
+                  >
+                    <SignupForm />
+                  </Modal>
+              ) : ''
+              }
 
               {/* Left side content */}
               <div className="text-left">
