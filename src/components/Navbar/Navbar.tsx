@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {
   Navbar,
   Collapse,
@@ -18,12 +18,12 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-const navListMenuItems = [
-  "Blog", "Support" , "FAQs", "Community"
-];
-const navListMenuItems2 = [
-  "Staking", "Convert" , "Swap"
-];
+
+
+const navListMenuItems = ["Blog", "Support", "FAQs", "Community"];
+const navListMenuItems2 = ["Staking", "Convert", "Swap"];
+
+
 function NavListMenu1() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -184,33 +184,63 @@ function NavList() {
   );
 }
 
-const NavbarMenu = () => {
-  const [openNav, setOpenNav] = React.useState(false);
+interface NavbarMenuProps {
+  handleSignUp: () => void;
+}
 
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false),
-    );
+const NavbarMenu: React.FC<NavbarMenuProps> = ({ handleSignUp }) => {
+  const [openNav, setOpenNav] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 960) {
+        setOpenNav(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
-    <Navbar placeholder={undefined} className="container-fluid py-8 shadow-none px-[7rem]" fullWidth={true}>
+    <Navbar
+      placeholder={undefined}
+      className="container-fluid py-8 shadow-none px-[7rem]"
+      fullWidth={true}
+    >
       <div className="flex items-center justify-between text-blue-gray-900">
-        <img src ={logo} className="w-40 h-auto" />
+        <img src={logo} className="w-40 h-auto" />
+        
         <div className="hidden lg:block">
           <NavList />
         </div>
+        
         <div className="hidden gap-2 lg:flex">
-          <Button placeholder={undefined} variant="outlined" size="sm" className="text-emerald border-emerald normal-case">
-          Sign-Up 
-        </Button>
-          <Button placeholder={undefined} variant="filled" size="sm" className="text-white bg-emerald normal-case">
-             Demo Wallet
+            <Button
+              placeholder={undefined}
+              variant="outlined"
+              size="sm"
+              className="text-emerald border-emerald normal-case"
+              onClick={handleSignUp}
+            >
+              Sign-Up
+            </Button>
+  
+          <Button
+            placeholder={undefined}
+            variant="filled"
+            size="sm"
+            className="text-white bg-emerald normal-case"
+          >
+            Demo Wallet
           </Button>
-       
         </div>
-        <IconButton placeholder={undefined}
+        
+        <IconButton
+          placeholder={undefined}
           variant="text"
           color="blue-gray"
           className="lg:hidden"
@@ -223,18 +253,37 @@ const NavbarMenu = () => {
           )}
         </IconButton>
       </div>
+  
       <Collapse open={openNav}>
         <NavList />
+        
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button placeholder={undefined} variant="outlined" size="sm" className="text-emerald border-emerald normal-case" fullWidth>
-          Sign-Up
+          <Button
+            placeholder={undefined}
+            variant="outlined"
+            size="sm"
+            className="text-emerald border-emerald normal-case"
+            fullWidth
+            onClick={handleSignUp}
+          >
+            Sign-Up
           </Button>
-          <Button placeholder={undefined} variant="filled" size="sm" fullWidth className="text-white bg-emerald normal-case">
+          
+          <Button
+            placeholder={undefined}
+            variant="filled"
+            size="sm"
+            fullWidth
+            className="text-white bg-emerald normal-case"
+          >
             Demo Wallet
           </Button>
         </div>
       </Collapse>
+  
+
     </Navbar>
   );
-}
-export default NavbarMenu
+};
+
+export default NavbarMenu;

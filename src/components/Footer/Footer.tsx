@@ -131,7 +131,7 @@ const Footer = () => {
 
             <div className="text-left">
               <Typography placeholder={undefined} color="blue-gray" className="font-normal">
-                &copy; 2023 Leyyer Tech OÜ
+                &copy; 2024 Leyyer Tech OÜ
               </Typography>
             </div>
           </div>

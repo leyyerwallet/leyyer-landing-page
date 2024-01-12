@@ -5,15 +5,28 @@ import google_play from '../../assets/app-stores/google-play.png';
 import web from '../../assets/app-stores/chrome-web.png';
 import pic1 from '../../assets/preview.png';
 import pic2 from '../../assets/app-mockup.png';
+import Modal from '@mui/material/Modal';
+import SignupForm from "../Navbar/SignUpForm.tsx";
+import {forwardRef} from "react";
 
-const Hero = () => {
+type HeroProps = {
+  showSignUp: boolean;
+  handleSignUp: () => void;
+};
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Hero: React.FC<HeroProps> = forwardRef(({ showSignUp, handleSignUp }, ref) => {
   return (
-      <div className="bg-white m-[1rem]">
-        <div className="relative isolate px-6 lg:px-8">
-          <div className="mx-auto sm:py-48 lg:py-[2rem]">
-
-            {/* Grid container for the two main columns */}
-            <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
+    <div className="bg-white m-[1rem]">
+    <div className="relative isolate px-6 lg:px-8">
+      <div className="mx-auto sm:py-48 lg:py-[2rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
+          {showSignUp ? (
+            <Modal open={showSignUp} onClose={() => handleSignUp()} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+              <SignupForm handleSignUp={handleSignUp} />
+               </Modal>
+              ) : ''
+              }
 
               {/* Left side content */}
               <div className="text-left">
@@ -182,6 +195,6 @@ const Hero = () => {
         </div>
       </div>
   );
-};
+});
 
 export default Hero;
