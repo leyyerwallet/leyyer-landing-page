@@ -1,20 +1,24 @@
 import emailjs from 'emailjs-com';
 
+interface SignupFormProps {
+  handleSignUp: () => void;
+}
 
-const SignupForm = (props) => {
-  
-const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+const SignupForm: React.FC<SignupFormProps> = ({ handleSignUp }) => {
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    emailjs.sendForm('service_9gc4oee', 'template_a54szlf', e.target as HTMLFormElement, 'pFuS6DzkRF7vqH-Gd')
-      .then((result) => {
-        console.log('Email sent successfully:', result.text);
-        () => props.handleSignUp;
-      }, (error) => {
-        console.log('Error sending email:', error.text);
-      });
-  };
 
+    emailjs
+      .sendForm(
+        'service_9gc4oee', 'template_a54szlf', e.target as HTMLFormElement, 'pFuS6DzkRF7vqH-Gd')
+        .then((result) => {
+          console.log('Email sent successfully:', result.text);
+          handleSignUp();
+        }, (error) => {
+          console.log('Error sending email:', error.text);
+        });
+    };
+  
   return (
     <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
       <div className="bg-white rounded-md p-6 max-w-md w-full z-50">
@@ -33,7 +37,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           </div>
             <div className="flex w-full justify-around">
           <button type="submit" className="bg-emerald text-white px-4 py-2 rounded-md hover:bg-emerald-dark">Request Early Access</button>
-          <button type="button" onClick={props.handleSignUp} className="bg-gray-300 text-gray-700 ml-2 px-4 py-2 rounded-md hover:bg-gray-400">Close</button>
+          <button type="button" onClick={handleSignUp} className="bg-gray-300 text-gray-700 ml-2 px-4 py-2 rounded-md hover:bg-gray-400">Close</button>
             </div>
         </form>
       </div>

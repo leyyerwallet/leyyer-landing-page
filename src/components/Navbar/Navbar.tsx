@@ -1,5 +1,4 @@
-import React, {useState, useEffect, forwardRef, ForwardedRef, useRef, useImperativeHandle} from "react";
-import SignupForm from "./SignUpForm";
+import React, {useState, useEffect} from "react";
 import {
   Navbar,
   Collapse,
@@ -19,7 +18,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import NavbarMenuRef from "../interface/NavbarMenuRef.tsx";
+
 
 const navListMenuItems = ["Blog", "Support", "FAQs", "Community"];
 const navListMenuItems2 = ["Staking", "Convert", "Swap"];
@@ -185,14 +184,26 @@ function NavList() {
   );
 }
 
-const NavbarMenu = (props) => {
-  const [openNav, setOpenNav] = useState(false);
+interface NavbarMenuProps {
+  handleSignUp: () => void;
+  signUpButtonRef: React.RefObject<HTMLButtonElement>;
+}
+
+const NavbarMenu: React.FC<NavbarMenuProps> = ({ handleSignUp, signUpButtonRef }) => {
+  const [openNav, setOpenNav] = useState<boolean>(false);
 
   useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false),
-    );
+    const handleResize = () => {
+      if (window.innerWidth >= 960) {
+        setOpenNav(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
@@ -214,8 +225,8 @@ const NavbarMenu = (props) => {
               variant="outlined"
               size="sm"
               className="text-emerald border-emerald normal-case"
-              onClick={props.handleSignUp}
-              ref={props.signUpButtonRef}
+              onClick={handleSignUp}
+              ref={signUpButtonRef}
             >
               Sign-Up
             </Button>
@@ -255,8 +266,8 @@ const NavbarMenu = (props) => {
             size="sm"
             className="text-emerald border-emerald normal-case"
             fullWidth
-            ref={props.signUpButtonRef}
-            onClick={props.handleSignUp}
+            onClick={handleSignUp}
+            ref={signUpButtonRef}
           >
             Sign-Up
           </Button>

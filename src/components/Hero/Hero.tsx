@@ -8,35 +8,21 @@ import pic2 from '../../assets/app-mockup.png';
 import Modal from '@mui/material/Modal';
 import SignupForm from "../Navbar/SignUpForm.tsx";
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
+type HeroProps = {
+  showSignUp: boolean;
+  handleSignUp: () => void;
 };
 
-const Hero = (props) => {
+const Hero: React.FC<HeroProps> = ({ showSignUp, handleSignUp }) => {
   return (
-      <div className="bg-white m-[1rem]">
-        <div className="relative isolate px-6 lg:px-8">
-          <div className="mx-auto sm:py-48 lg:py-[2rem]">
-
-            {/* Grid container for the two main columns */}
-            <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
-              {props.showSignUp ? (
-                  <Modal
-                      open={props.showSignUp}
-                      onClose={() => !props.showSignUp}
-                      aria-labelledby="modal-modal-title"
-                      aria-describedby="modal-modal-description"
-                  >
-                    <SignupForm handleSignUp={props.handleSignUp} />
-                  </Modal>
+    <div className="bg-white m-[1rem]">
+    <div className="relative isolate px-6 lg:px-8">
+      <div className="mx-auto sm:py-48 lg:py-[2rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
+          {showSignUp ? (
+            <Modal open={showSignUp} onClose={() => handleSignUp()} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+              <SignupForm handleSignUp={handleSignUp} />
+               </Modal>
               ) : ''
               }
 
