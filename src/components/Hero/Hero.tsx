@@ -7,13 +7,15 @@ import pic1 from '../../assets/preview.png';
 import pic2 from '../../assets/app-mockup.png';
 import Modal from '@mui/material/Modal';
 import SignupForm from "../Navbar/SignUpForm.tsx";
+import {forwardRef} from "react";
 
 type HeroProps = {
   showSignUp: boolean;
   handleSignUp: () => void;
 };
 
-const Hero: React.FC<HeroProps> = ({ showSignUp, handleSignUp }) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Hero: React.FC<HeroProps> = forwardRef(({ showSignUp, handleSignUp }, ref) => {
   return (
     <div className="bg-white m-[1rem]">
     <div className="relative isolate px-6 lg:px-8">
@@ -193,6 +195,6 @@ const Hero: React.FC<HeroProps> = ({ showSignUp, handleSignUp }) => {
         </div>
       </div>
   );
-};
+});
 
 export default Hero;

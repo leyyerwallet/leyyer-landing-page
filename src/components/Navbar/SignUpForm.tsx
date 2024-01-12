@@ -1,10 +1,12 @@
 import emailjs from 'emailjs-com';
+import {forwardRef} from "react";
 
 interface SignupFormProps {
   handleSignUp: () => void;
 }
 
-const SignupForm: React.FC<SignupFormProps> = ({ handleSignUp }) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const SignupForm: React.FC<SignupFormProps> = forwardRef(({ handleSignUp }, ref) => {
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -43,6 +45,6 @@ const SignupForm: React.FC<SignupFormProps> = ({ handleSignUp }) => {
       </div>
     </div>
   );
-};
+});
 
 export default SignupForm;

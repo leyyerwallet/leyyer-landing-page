@@ -186,10 +186,9 @@ function NavList() {
 
 interface NavbarMenuProps {
   handleSignUp: () => void;
-  signUpButtonRef: React.RefObject<HTMLButtonElement>;
 }
 
-const NavbarMenu: React.FC<NavbarMenuProps> = ({ handleSignUp, signUpButtonRef }) => {
+const NavbarMenu: React.FC<NavbarMenuProps> = ({ handleSignUp }) => {
   const [openNav, setOpenNav] = useState<boolean>(false);
 
   useEffect(() => {
@@ -226,7 +225,6 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ handleSignUp, signUpButtonRef }
               size="sm"
               className="text-emerald border-emerald normal-case"
               onClick={handleSignUp}
-              ref={signUpButtonRef}
             >
               Sign-Up
             </Button>
@@ -267,7 +265,6 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ handleSignUp, signUpButtonRef }
             className="text-emerald border-emerald normal-case"
             fullWidth
             onClick={handleSignUp}
-            ref={signUpButtonRef}
           >
             Sign-Up
           </Button>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Hero from './components/Hero/Hero';
 import NavbarMenu from './components/Navbar/Navbar';
 import Cards from './components/Cards/Cards';
@@ -10,7 +10,6 @@ import Footer from './components/Footer/Footer';
 type AppProps = {bool: boolean};
 
 const App: React.FC<AppProps> = () => {
-  const signUpButtonRef = useRef<HTMLButtonElement | null>(null);
   const [showSignUp, setShowSignUp] = useState<boolean>(false);
 
   const handleSignUp = () => {
@@ -19,7 +18,7 @@ const App: React.FC<AppProps> = () => {
 
   return (
     <div>
-      <NavbarMenu handleSignUp={handleSignUp} signUpButtonRef={signUpButtonRef} />
+      <NavbarMenu handleSignUp={handleSignUp} />
       <Hero showSignUp={showSignUp} handleSignUp={handleSignUp}  />
       <Cards />
       <Grid />
