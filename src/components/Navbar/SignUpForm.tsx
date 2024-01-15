@@ -6,7 +6,7 @@ interface SignupFormProps {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const SignupForm: React.FC<SignupFormProps> = forwardRef(({ handleSignUp }, ref) => {
+const SignupForm: React.FC<SignupFormProps> = forwardRef(({ handleSignUp }) => {
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
