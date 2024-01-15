@@ -18,6 +18,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import {useDashboardSharedVariable} from "../../shared/dashboard.shared.tsx";
 
 
 const navListMenuItems = ["Blog", "Support", "FAQs", "Community"];
@@ -184,11 +185,8 @@ function NavList() {
   );
 }
 
-interface NavbarMenuProps {
-  handleSignUp: () => void;
-}
-
-const NavbarMenu: React.FC<NavbarMenuProps> = ({ handleSignUp }) => {
+const NavbarMenu: React.FC = () => {
+  const { showSignUp, handleSignUp } = useDashboardSharedVariable();
   const [openNav, setOpenNav] = useState<boolean>(false);
 
   useEffect(() => {
