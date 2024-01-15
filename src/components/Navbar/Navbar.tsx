@@ -186,7 +186,7 @@ function NavList() {
 }
 
 const NavbarMenu: React.FC = () => {
-  const { showSignUp, handleSignUp } = useDashboardSharedVariable();
+  const { handleSignUp } = useDashboardSharedVariable();
   const [openNav, setOpenNav] = useState<boolean>(false);
 
   useEffect(() => {

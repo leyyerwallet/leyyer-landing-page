@@ -1,16 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 import NavbarMenu from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Body from "./components/Body/Body.tsx";
-import {DashboardSharedProvider} from "./shared/dashboard.shared.tsx";
+import {DashboardSharedProvider, useDashboardSharedVariable} from "./shared/dashboard.shared.tsx";
 
-type AppProps = {bool: boolean};
-
-const App: React.FC<AppProps> = () => {
+const App: React.FC = () => {
+  const signupState = useDashboardSharedVariable();
 
   return (
     <div>
-      <DashboardSharedProvider>
+      <DashboardSharedProvider signupState={signupState}>
       <NavbarMenu />
       <Body />
       <Footer />
