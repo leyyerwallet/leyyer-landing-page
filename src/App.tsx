@@ -1,30 +1,20 @@
-import React, { useState } from 'react';
-import Hero from './components/Hero/Hero';
+import React, {useState} from 'react';
 import NavbarMenu from './components/Navbar/Navbar';
-import Cards from './components/Cards/Cards';
-import Steps from './components/Steps/Steps';
-import Grid from './components/Grid/Grid';
-import Links from './components/Links/Links';
 import Footer from './components/Footer/Footer';
+import Body from "./components/Body/Body.tsx";
+import {DashboardSharedProvider} from "./shared/dashboard.shared.tsx";
 
 type AppProps = {bool: boolean};
 
 const App: React.FC<AppProps> = () => {
-  const [showSignUp, setShowSignUp] = useState<boolean>(false);
-
-  const handleSignUp = () => {
-    setShowSignUp((prevState) => !prevState);
-  };
 
   return (
     <div>
-      <NavbarMenu handleSignUp={handleSignUp} />
-      <Hero showSignUp={showSignUp} handleSignUp={handleSignUp}  />
-      <Cards />
-      <Grid />
-      <Steps />
-      <Links />
+      <DashboardSharedProvider>
+      <NavbarMenu />
+      <Body />
       <Footer />
+      </DashboardSharedProvider>
     </div>
   );
 };
