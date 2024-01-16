@@ -58,7 +58,7 @@ function NavListMenu1() {
         <MenuHandler>
           <Typography placeholder={undefined} as="div" variant="small" className="font-medium">
             <ListItem placeholder={undefined}
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center  py-2 pr-4 font-medium text-gray-900"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
