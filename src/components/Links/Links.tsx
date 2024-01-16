@@ -8,16 +8,16 @@ const Links = () => {
         <div className="container max-w-full max-h-full mt-20  bg-[#00D395]">
             <div className="grid grid-cols-1 md:grid-cols-2  gap-2 place-content-start">
 
-                <div className="mx-4 my-2 p-4 text-center md:text-center">
+                <div className="mx-4 my-2 p-4 flex flex-col items-center">
                     <Typography
                         placeholder={undefined}
                         variant="h2"
                         color="white"
                         className="font-poppins font-bold text-2xl md:text-4xl md:leading-[50px] mb-1"
                     >
-                        Get your Everything <br/> Wallet now!
+                        <div>Get your Everything</div> <div> Wallet now! </div>
                     </Typography>
-                    <div className="mt-2">
+                    <div className="mt-2 w-2/4">
                         <Button
                             placeholder={undefined}
                             color="white"
