@@ -3,7 +3,7 @@ import logo from "../../assets/logo-footer.png";
 const LINKS = [
   {
     title: "Company",
-    items: ["About us", "Blog", "Security", "Press Kit"],
+    items: ["About us", "Blog", "Security", "Pitch Deck"],
   },
   {
     title: "Wallet",
@@ -129,41 +129,44 @@ const Footer = () => {
             <div></div>
             <div></div>
 
-            <div className="text-left">
-              <Typography placeholder={undefined} color="blue-gray" className="font-normal">
-                &copy; 2024 Leyyer Tech OÜ
-              </Typography>
+              <div className="text-left">
+                <Typography placeholder={undefined} color="blue-gray" className="font-normal">
+                  &copy; 2024 Leyyer Tech OÜ
+                </Typography>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 justify-between text-left">
+              {LINKS.map(({ title, items }) => (
+                  <ul key={title}>
+                    <Typography
+                        placeholder={undefined}
+                        variant="small"
+                        color="black"
+                        className="mb-2 font-poppins leading-4 font-bold"
+                    >
+                      {title}
+                    </Typography>
+                    {items.map((link) => (
+                        <li key={link}>
+                          <Typography
+                              placeholder={undefined}
+                              variant="small"
+                              target ="blank"
+                              as="a"
+                              href={title === "Company" && link === "Pitch Deck" ? "https://drive.google.com/file/d/1FoLjFifjKyFIbbeLsakbCG7R2_EtBWPC/view?pli=1" : "#"}
+                              color="black"
+                              className="py-1.5 font-poppins font-medium leading-4 transition-colors opacity-40 hover:text-blue-gray-900"
+                          >
+                            {link}
+                          </Typography>
+                        </li>
+                    ))}
+                  </ul>
+              ))}
             </div>
           </div>
-          <div className="grid grid-cols-3 justify-between text-left">
-            {LINKS.map(({ title, items }) => (
-              <ul key={title}>
-                <Typography placeholder={undefined}
-                  variant="small"
-                  color="black"
-                  className="mb-2 font-poppins leading-4 font-bold"
-                >
-                  {title}
-                </Typography>
-                {items.map((link) => (
-                  <li key={link}>
-                    <Typography placeholder={undefined}
-                      variant="small"
-                      as="a"
-                      href="#"
-                      color="black"
-                      className="py-1.5 font-poppins font-medium leading-4 transition-colors opacity-40 hover:text-blue-gray-900"
-                    >
-                      {link}
-                    </Typography>
-                  </li>
-                ))}
-              </ul>
-            ))}
-          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
   );
 };
 export default Footer;

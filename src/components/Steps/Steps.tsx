@@ -10,7 +10,7 @@ import pic3 from '../../assets/icons/wallet.png';
 
 const Steps = () => {
   return (
-    <div className="py-[5rem] px-[3rem] text-center">
+    <div className=" px-[2rem] text-center">
       <Typography placeholder={undefined} variant="h2" color="black" className="font-poppins leading-loose">
         Follow the steps to Get Started
       </Typography>
@@ -28,11 +28,11 @@ const Steps = () => {
               />
             </CardHeader>
             <CardBody placeholder={undefined} className="text-center">
-              <Typography placeholder={undefined} variant="h5" color="blue-gray" className="mb-2 text-[25px] md:leading-tight sm:leading-tight">
+              <Typography placeholder={undefined} variant="h5" color="blue-gray" className="mb-2 text-[25px] flex-center">
                 Get a Wallet
               </Typography>
-              <Typography placeholder={undefined} className="text-[16px]">
-                Get started with the application.<br/>Download mobile or use the web app at your disposal
+              <Typography placeholder={undefined} className="text-[16px] justify-center">
+                Get started with the application. Download mobile or use the web app at your disposal
               </Typography>
             </CardBody>
           </Card>
@@ -47,7 +47,7 @@ const Steps = () => {
               />
             </CardHeader>
             <CardBody placeholder={undefined} className="text-center">
-              <Typography placeholder={undefined} variant="h5" color="blue-gray" className="mb-2 text-[25px]">
+              <Typography placeholder={undefined} variant="h5" color="blue-gray" className="mb-2 text-[25px] flex-center">
                 Do the Crypto!
               </Typography>
               <Typography placeholder={undefined} className="text-[16px]">
