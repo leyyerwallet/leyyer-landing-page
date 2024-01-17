@@ -31,7 +31,7 @@ const Grid = () => {
             {/* Versatile Cards */}
             <Card
                 placeholder={undefined}
-                className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none"
+                className="w-full max-w-[22rem] bg-[#1B1C20] h-[48%] rounded-[25px] shadow-none"
             >
               <CardBody
                   placeholder={undefined}
@@ -62,7 +62,7 @@ const Grid = () => {
             {/* Private-Key Owner */}
             <Card
                 placeholder={undefined}
-                className="w-full max-w-[22rem] h-[53%] bg-[#1B1C20] rounded-[25px] shadow-none mt-6"
+                className="w-full max-w-[22rem] h-[48%] bg-[#1B1C20] rounded-[25px] shadow-none mt-6"
             >
               <CardBody
                   placeholder={undefined}
@@ -96,7 +96,7 @@ const Grid = () => {
             {/* Connect to Dapps */}
             <Card
                 placeholder={undefined}
-                className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none"
+                className="w-full max-w-[22rem] h-[48%] bg-[#1B1C20] rounded-[25px] shadow-none"
             >
               <CardBody
                   placeholder={undefined}
@@ -131,7 +131,7 @@ const Grid = () => {
             {/* Customer Support */}
             <Card
                 placeholder={undefined}
-                className="w-full max-w-[22rem] h-[53%] bg-[#1B1C20] rounded-[25px] shadow-none mt-6"
+                className="w-full max-w-[22rem] h-[48%] bg-[#1B1C20] rounded-[25px] shadow-none mt-6"
             >
               <CardBody
                   placeholder={undefined}
@@ -141,16 +141,16 @@ const Grid = () => {
                     placeholder={undefined}
                     variant="h5"
                     color="white"
-                    className="mb-4 font-poppins font-normal"
+                    className="font-poppins font-normal"
                 >
                   <span className="text-emerald"> Customer </span> Support
                 </Typography>
-                <img src={pic3} alt="card-image" className="w-40 h-auto m-auto" />
+                <img src={pic3} alt="card-image" className="w-35 h-auto m-auto" />
                 <Typography
                     placeholder={undefined}
                     variant="small"
                     color="white"
-                    className="font-normal tracking-tight text-center mx-[2rem]"
+                    className="font-normal text-center"
                 >
                   Our team is ready to help you with any <span className="text-emerald"> questions or issues </span>{" "}
                   you may have.

@@ -17,7 +17,7 @@ const Links = () => {
                     >
                         <div>Get your Everything</div> <div> Wallet now! </div>
                     </Typography>
-                    <div className="mt-2 w-2/4">
+                    <div className="mt-2 -ml-[36%]">
                         <Button
                             placeholder={undefined}
                             color="white"
