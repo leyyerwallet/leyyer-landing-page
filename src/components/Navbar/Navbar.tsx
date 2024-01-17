@@ -232,6 +232,7 @@ const NavbarMenu: React.FC = () => {
             variant="filled"
             size="sm"
             className="text-white bg-emerald normal-case"
+            onClick={() => window.location.href = 'https://demo.leyyer.com'}
           >
             Demo Wallet
           </Button>
@@ -273,6 +274,7 @@ const NavbarMenu: React.FC = () => {
             size="sm"
             fullWidth
             className="text-white bg-emerald normal-case"
+            onClick={() => window.location.href = 'https://demo.leyyer.com'}
           >
             Demo Wallet
           </Button>
