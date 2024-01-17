@@ -1,12 +1,14 @@
 import emailjs from 'emailjs-com';
 import React, {forwardRef} from "react";
+import {useDashboardSharedVariable} from "../../shared/dashboard.shared.tsx";
 
 interface SignupFormProps {
   handleSignUp: () => void;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const SignupForm: React.FC<SignupFormProps> = forwardRef(({ handleSignUp }, ref) => {
+const SignupForm: React.FC<SignupFormProps> = forwardRef(() => {
+  const { handleSignUp } = useDashboardSharedVariable();
+
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
