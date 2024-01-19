@@ -31,7 +31,7 @@ const Grid = () => {
             {/* Versatile Cards */}
             <Card
                 placeholder={undefined}
-                className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none"
+                className="w-full max-w-[22rem] bg-[#1B1C20] h-[48%] rounded-[25px] shadow-none"
             >
               <CardBody
                   placeholder={undefined}
@@ -62,7 +62,7 @@ const Grid = () => {
             {/* Private-Key Owner */}
             <Card
                 placeholder={undefined}
-                className="w-full max-w-[22rem] h-[53%] bg-[#1B1C20] rounded-[25px] shadow-none mt-6"
+                className="w-full max-w-[22rem] h-[48%] bg-[#1B1C20] rounded-[25px] shadow-none mt-6"
             >
               <CardBody
                   placeholder={undefined}
@@ -80,7 +80,7 @@ const Grid = () => {
                     placeholder={undefined}
                     variant="small"
                     color="white"
-                    className="font-normal text-center font-poppins"
+                    className="font-normal font-poppins"
                 >
                   You are the only owner of your private keys for all wallets connected
                   to your device
@@ -96,7 +96,7 @@ const Grid = () => {
             {/* Connect to Dapps */}
             <Card
                 placeholder={undefined}
-                className="w-full max-w-[22rem] bg-[#1B1C20] rounded-[25px] shadow-none"
+                className="w-full max-w-[22rem] h-[48%] bg-[#1B1C20] rounded-[25px] shadow-none"
             >
               <CardBody
                   placeholder={undefined}
@@ -120,7 +120,7 @@ const Grid = () => {
                     placeholder={undefined}
                     variant="small"
                     color="white"
-                    className="font-normal text-center"
+                    className="font-normal font-poppins"
                 >
                   Unlocking <span className="text-emerald"> blockchain applications </span>{" "}
                   and embracing web3 has never been <span className="text-emerald"> easier </span> and more{" "}
@@ -131,7 +131,7 @@ const Grid = () => {
             {/* Customer Support */}
             <Card
                 placeholder={undefined}
-                className="w-full max-w-[22rem] h-[53%] bg-[#1B1C20] rounded-[25px] shadow-none mt-6"
+                className="w-full max-w-[22rem] h-[48%] bg-[#1B1C20] rounded-[25px] shadow-none mt-6"
             >
               <CardBody
                   placeholder={undefined}
@@ -141,16 +141,16 @@ const Grid = () => {
                     placeholder={undefined}
                     variant="h5"
                     color="white"
-                    className="mb-4 font-poppins font-normal"
+                    className="font-poppins font-normal"
                 >
                   <span className="text-emerald"> Customer </span> Support
                 </Typography>
-                <img src={pic3} alt="card-image" className="w-40 h-auto m-auto" />
+                <img src={pic3} alt="card-image" className="w-35 m-auto h-32" />
                 <Typography
                     placeholder={undefined}
                     variant="small"
                     color="white"
-                    className="font-normal tracking-tight text-center mx-[2rem]"
+                    className="font-normal font-poppins"
                 >
                   Our team is ready to help you with any <span className="text-emerald"> questions or issues </span>{" "}
                   you may have.
@@ -163,7 +163,7 @@ const Grid = () => {
             {/* Manage Effortlessly */}
             <Card
                 placeholder={undefined}
-                className="w-full max-w-[22rem] h-[100%] bg-[#1B1C20] rounded-[25px] shadow-none"
+                className="w-auto max-w-[22rem] h-[100%] bg-[#1B1C20] rounded-[25px] shadow-none"
             >
               <CardBody
                   placeholder={undefined}
@@ -181,7 +181,7 @@ const Grid = () => {
                     placeholder={undefined}
                     variant="small"
                     color="white"
-                    className="font-normal text-center "
+                    className="font-normal font-poppins"
                 >
                   <span className="text-emerald">Leyyer Wallet</span> allows you to manage your{" "}
                   <span className="text-emerald"> digital assets</span> with ease
@@ -191,7 +191,7 @@ const Grid = () => {
                   placeholder={undefined}
                   className="text-center mx-[3rem] font-poppins"
               >
-                <img src={pic5} alt="card-image" className="mb-4 w-40 h-auto m-auto" />
+                <img src={pic5} alt="card-image" className="mb-4 w-40 m-auto" />
               </CardFooter>
             </Card>
           </div>

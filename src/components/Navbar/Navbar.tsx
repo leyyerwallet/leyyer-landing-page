@@ -58,11 +58,11 @@ function NavListMenu1() {
         <MenuHandler>
           <Typography placeholder={undefined} as="div" variant="small" className="font-medium">
             <ListItem placeholder={undefined}
-              className="flex items-center  py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-2 py-2 pr-4  font-medium text-emerald"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              Resources
+              Resources 
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -116,14 +116,14 @@ function NavListMenu2() {
       <Menu
         open={isMenuOpen}
         handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }} 
+        offset={{ mainAxis: 20 }}
         placement="bottom"
         allowHover={true}
       >
         <MenuHandler>
           <Typography placeholder={undefined} as="div" variant="small" className="font-medium">
             <ListItem placeholder={undefined}
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-2 py-2 pr-4 font-medium text-emerald"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -166,7 +166,7 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem placeholder={undefined} className="flex items-center gap-2 py-2 pr-4">Assets</ListItem>
+        <ListItem placeholder={undefined} className="flex items-center text-emerald gap-2 py-2 pr-4">Assets</ListItem>
       </Typography>
       <NavListMenu1 />
       <NavListMenu2 />
@@ -174,10 +174,10 @@ function NavList() {
         as="a"
         href="#"
         variant="small"
-        color="blue-gray"
+        color="gray"
         className="font-medium"
       >
-        <ListItem placeholder={undefined} className="flex items-center gap-2 py-2 pr-4">
+        <ListItem placeholder={undefined} className="flex items-center text-emerald gap-2 py-2 pr-4">
          NFTs
         </ListItem>
       </Typography>
@@ -206,16 +206,16 @@ const NavbarMenu: React.FC = () => {
   return (
     <Navbar
       placeholder={undefined}
-      className="container-fluid py-8 shadow-none px-[7rem]"
+      className="container-fluid py-8 shadow-none md:px-[7rem]"
       fullWidth={true}
     >
-      <div className="flex items-center justify-between text-blue-gray-900">
+      <div className="flex justify-between text-blue-gray-900">
         <img src={logo} className="w-40 h-auto" />
         
         <div className="hidden lg:block">
           <NavList />
         </div>
-        
+
         <div className="hidden gap-2 lg:flex">
             <Button
               placeholder={undefined}
@@ -232,6 +232,7 @@ const NavbarMenu: React.FC = () => {
             variant="filled"
             size="sm"
             className="text-white bg-emerald normal-case"
+            onClick={() => window.open('https://demo.leyyer.com')}
           >
             Demo Wallet
           </Button>
@@ -273,6 +274,7 @@ const NavbarMenu: React.FC = () => {
             size="sm"
             fullWidth
             className="text-white bg-emerald normal-case"
+            onClick={() => window.open('https://demo.leyyer.com')}
           >
             Demo Wallet
           </Button>
