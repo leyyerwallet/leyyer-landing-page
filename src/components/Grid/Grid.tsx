@@ -80,7 +80,7 @@ const Grid = () => {
                     placeholder={undefined}
                     variant="small"
                     color="white"
-                    className="font-normal text-center font-poppins"
+                    className="font-normal font-poppins"
                 >
                   You are the only owner of your private keys for all wallets connected
                   to your device
@@ -120,7 +120,7 @@ const Grid = () => {
                     placeholder={undefined}
                     variant="small"
                     color="white"
-                    className="font-normal text-center"
+                    className="font-normal font-poppins"
                 >
                   Unlocking <span className="text-emerald"> blockchain applications </span>{" "}
                   and embracing web3 has never been <span className="text-emerald"> easier </span> and more{" "}
@@ -145,12 +145,12 @@ const Grid = () => {
                 >
                   <span className="text-emerald"> Customer </span> Support
                 </Typography>
-                <img src={pic3} alt="card-image" className="w-35 h-auto m-auto" />
+                <img src={pic3} alt="card-image" className="w-35 m-auto h-32" />
                 <Typography
                     placeholder={undefined}
                     variant="small"
                     color="white"
-                    className="font-normal text-center"
+                    className="font-normal font-poppins"
                 >
                   Our team is ready to help you with any <span className="text-emerald"> questions or issues </span>{" "}
                   you may have.
@@ -181,7 +181,7 @@ const Grid = () => {
                     placeholder={undefined}
                     variant="small"
                     color="white"
-                    className="font-normal text-center "
+                    className="font-normal font-poppins"
                 >
                   <span className="text-emerald">Leyyer Wallet</span> allows you to manage your{" "}
                   <span className="text-emerald"> digital assets</span> with ease
@@ -191,7 +191,7 @@ const Grid = () => {
                   placeholder={undefined}
                   className="text-center mx-[3rem] font-poppins"
               >
-                <img src={pic5} alt="card-image" className="mb-4 w-40 h-auto m-auto" />
+                <img src={pic5} alt="card-image" className="mb-4 w-40 m-auto" />
               </CardFooter>
             </Card>
           </div>

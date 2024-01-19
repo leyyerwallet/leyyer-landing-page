@@ -116,7 +116,7 @@ function NavListMenu2() {
       <Menu
         open={isMenuOpen}
         handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }} 
+        offset={{ mainAxis: 20 }}
         placement="bottom"
         allowHover={true}
       >
@@ -206,16 +206,16 @@ const NavbarMenu: React.FC = () => {
   return (
     <Navbar
       placeholder={undefined}
-      className="container-fluid py-8 shadow-none px-[7rem]"
+      className="container-fluid py-8 shadow-none md:px-[7rem]"
       fullWidth={true}
     >
-      <div className="flex items-center justify-between text-blue-gray-900">
+      <div className="flex justify-between text-blue-gray-900">
         <img src={logo} className="w-40 h-auto" />
         
         <div className="hidden lg:block">
           <NavList />
         </div>
-        
+
         <div className="hidden gap-2 lg:flex">
             <Button
               placeholder={undefined}
@@ -232,7 +232,7 @@ const NavbarMenu: React.FC = () => {
             variant="filled"
             size="sm"
             className="text-white bg-emerald normal-case"
-            onClick={() => window.location.href = 'https://demo.leyyer.com'}
+            onClick={() => window.open('https://demo.leyyer.com')}
           >
             Demo Wallet
           </Button>
@@ -274,7 +274,7 @@ const NavbarMenu: React.FC = () => {
             size="sm"
             fullWidth
             className="text-white bg-emerald normal-case"
-            onClick={() => window.location.href = 'https://demo.leyyer.com'}
+            onClick={() => window.open('https://demo.leyyer.com')}
           >
             Demo Wallet
           </Button>
