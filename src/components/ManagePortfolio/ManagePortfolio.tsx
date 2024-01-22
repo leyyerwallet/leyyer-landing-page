@@ -1,7 +1,9 @@
 import pic2 from '../../assets/app-mockup.png';
 import { Typography } from '@material-tailwind/react';
+import Background from "../Background/Background.tsx";
 
 const ManagePortfolio = () => {    return (
+    <div className="relative">
         <div className="grid lg:grid-cols-2 gap-4  py-2 md:grid-cols-1 sm:grid-cols-1 items-center">
             {/* Image Section */}
             <div className="display-flex ml-10">
@@ -12,7 +14,7 @@ const ManagePortfolio = () => {    return (
                 />
             </div>
 
-            {/* Text Section */}
+            <Background className={'left-[calc(100%-60rem)] sm:left-[calc(100%-60rem)] top-[calc(100%-46rem)] sm:top-[calc(100%-46rem)]'} />
             <div className="mt-6 ml-9 md:mt-0">
                 <Typography
                     placeholder={undefined}
@@ -36,6 +38,7 @@ const ManagePortfolio = () => {    return (
                 </div>
             </div>
         </div>
+    </div>
     );
 };
 
