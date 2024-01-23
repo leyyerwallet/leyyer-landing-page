@@ -7,7 +7,7 @@ import Background from "../Background/Background.tsx";
 
 const Steps: React.FC = () => {
   return (
-        <div className="relative">
+        <div className="relative flex place-content-center text-balance">
           <Background className={'top-[calc(100%-90rem)] sm:top-[calc(100%-90rem)]'} />
         <div className="px-[2rem] text-center max-w-[1408px] mx-auto p-2 md:p-8 gap-2 md:gap-12 m-2 md:m-[1rem]">
           <Background className={'top-[calc(100%-50rem)] sm:top-[calc(100%-50rem)]'} />
@@ -26,10 +26,10 @@ const Steps: React.FC = () => {
           >
             Here is the step-by-step process how you can use Leyyer
           </Typography>
-          <div className="grid lg:grid-cols-3 gap-4 justify-center m-6 pt-8 sm:grid-cols-1">
+          <div className="grid lg:grid-cols-3 gap-x-2 auto-cols-auto m-6 pt-8 sm:grid-cols-1">
             {/* Step 1 */}
-            <div className="flex flex-col items-center">
-              <Card placeholder={undefined} className="m-8 w-96 shadow-none">
+            <div className="place-self-center pr-1.5 flex sm:flex-grow w-4/5 sm:w-auto">
+              <Card placeholder={undefined} className="m-8 w-96 shadow-2xl">
                 <CardHeader placeholder={undefined} className="shadow-none mx-0">
                   <img
                       src={pic2}
@@ -49,8 +49,8 @@ const Steps: React.FC = () => {
             </div>
 
             {/* Step 2 */}
-            <div className="flex flex-col items-center">
-              <Card placeholder={undefined} className="m-8 w-96 shadow-none">
+            <div className="place-self-center pr-1.5 flex sm:flex-grow w-4/5 sm:w-auto">
+              <Card placeholder={undefined} className="m-8 w-96 shadow-2xl">
                 <CardHeader placeholder={undefined} className="shadow-none mx-0">
                   <img
                       src={pic3}
@@ -70,8 +70,8 @@ const Steps: React.FC = () => {
             </div>
 
             {/* Step 3 */}
-            <div className="flex flex-col items-center">
-              <Card placeholder={undefined} className="m-8 w-96 shadow-none">
+            <div className="place-self-center pr-1.5 flex sm:flex-grow w-4/5 sm:w-auto">
+              <Card placeholder={undefined} className="m-8 w-96 shadow-2xl">
                 <CardHeader placeholder={undefined} className="shadow-none mx-0">
                   <img
                       src={picCreditCard}
