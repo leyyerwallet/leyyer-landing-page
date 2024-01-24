@@ -155,7 +155,7 @@ const Grid = () => {
                     className="font-normal font-poppins"
                 >
                   Our team is ready to help you with any <span className="text-emerald"> questions or issues </span>{" "}
-                  you may have.
+                  you may have
                 </Typography>
               </CardBody>
             </Card>

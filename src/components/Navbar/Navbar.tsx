@@ -22,7 +22,7 @@ import {useDashboardSharedVariable} from "../../shared/dashboard.shared.tsx";
 
 
 const navListMenuItems = ["Blog", "Support", "FAQs", "Community"];
-const navListMenuItems2 = ["Staking", "Convert", "Swap"];
+const navListMenuItems2 = ["Staking", "Convert", "Buy Crypto", "Sell Crypto"];
 
 
 function NavListMenu1() {

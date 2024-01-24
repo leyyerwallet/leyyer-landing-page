@@ -33,7 +33,7 @@ const ManagePortfolio = () => {    return (
                         className="font-poppins text-lg md:text-xl font-normal text-center md:text-left"
                     >
                         Buy, sell & swap the
-                        cryptocurrencies<br/> you want anytime, anywhere.
+                        cryptocurrencies<br/> you want anytime, anywhere
                     </Typography>
                 </div>
             </div>

@@ -17,7 +17,7 @@ const Cards = () => {
                     color="gray"
                     className="font-poppins font-normal text-base sm:text-xl md:text-2xl md:leading-10 ml-8"
                 >
-                    Make payments with VISA cards around the world, in your city, and, of course, in your local grocery shop.
+                    Make payments with VISA cards around the world, in your city, and, of course, in your local grocery shop
                 </Typography>
 
                 <div className="mt-4 flex-auto md:text-left md:ml-8">
