@@ -22,6 +22,7 @@ const Links = () => {
                             placeholder={undefined}
                             color="white"
                             className="text-emerald"
+                            onClick={() => window.open('https://demo.leyyer.com')}
                         >
                             Download
                         </Button>

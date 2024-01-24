@@ -9,11 +9,13 @@ import pic2 from '../../assets/manage.png';
 import pic3 from '../../assets/div.png';
 import pic4 from '../../assets/Grayscale.png';
 import pic5 from '../../assets/spend.png';
+import Background from "../Background/Background.tsx";
 
 const Grid = () => {
   return (
-      <div className="container-fluid flex flex-col items-center justify-center pt-20 pb-0">
+      <div className="container-fluid flex flex-col items-center justify-center pt-20 pb-0 relative">
         <div className="my-2 px-4 py-8">
+          <Background className={'left-[0rem] sm:left-[0rem] top-[calc(100%-74rem)] sm:top-[calc(100%-74rem)]'} />
           <Typography
               placeholder={undefined}
               variant="h2"
@@ -153,7 +155,7 @@ const Grid = () => {
                     className="font-normal font-poppins"
                 >
                   Our team is ready to help you with any <span className="text-emerald"> questions or issues </span>{" "}
-                  you may have.
+                  you may have
                 </Typography>
               </CardBody>
             </Card>
@@ -173,7 +175,7 @@ const Grid = () => {
                     placeholder={undefined}
                     variant="h5"
                     color="white"
-                    className="font-normal mt-4 mb-4"
+                    className="font-poppins font-normal mb-4"
                 >
                   Manage <span className="text-emerald"> Effortlessly </span>
                 </Typography>
