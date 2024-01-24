@@ -21,7 +21,7 @@ const Steps: React.FC = () => {
           </Typography>
           <Typography
               placeholder={undefined}
-              variant="h4"
+              variant="h5"
               className="font-poppins text-gray-400 font-medium mt-4"
           >
             Here is the step-by-step process how you can use Leyyer

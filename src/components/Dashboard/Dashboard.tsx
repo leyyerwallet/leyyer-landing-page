@@ -27,7 +27,7 @@ const Dashboard: React.FC = forwardRef(() => {
               )}
 
               {/* Left side content */}
-              <div className="md:w-1/2 md:pr-12">
+              <div className="md:w-1/2 md:pr-12 ml-4">
                 <Typography
                     placeholder={undefined}
                     variant="h2"

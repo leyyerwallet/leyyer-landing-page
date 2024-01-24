@@ -58,7 +58,7 @@ function NavListMenu1() {
           <MenuHandler>
             <Typography placeholder={undefined} as="div" variant="small" className="font-medium">
               <ListItem placeholder={undefined}
-                        className="flex items-center gap-2 py-2 pr-4  font-medium text-emerald"
+                        className="flex items-center gap-2 py-2 pr-4  font-medium text-emerald hover:text-emerald focus:text-emerald active:text-emerald"
                         selected={isMenuOpen || isMobileMenuOpen}
                         onClick={() => setIsMobileMenuOpen((cur) => !cur)}
               >
@@ -123,7 +123,7 @@ function NavListMenu2() {
           <MenuHandler>
             <Typography placeholder={undefined} as="div" variant="small" className="font-medium">
               <ListItem placeholder={undefined}
-                        className="flex items-center gap-2 py-2 pr-4 font-medium text-emerald"
+                        className="flex items-center gap-2 py-2 pr-4 font-medium text-emerald hover:text-emerald focus:text-emerald active:text-emerald"
                         selected={isMenuOpen || isMobileMenuOpen}
                         onClick={() => setIsMobileMenuOpen((cur) => !cur)}
               >
@@ -166,7 +166,7 @@ function NavList() {
                     color="blue-gray"
                     className="font-medium"
         >
-          <ListItem placeholder={undefined} className="flex items-center text-emerald gap-2 py-2 pr-4">Assets</ListItem>
+          <ListItem placeholder={undefined} className="flex items-center text-emerald hover:text-emerald focus:text-emerald active:text-emerald gap-2 py-2 pr-4">Assets</ListItem>
         </Typography>
         <NavListMenu1 />
         <NavListMenu2 />
@@ -177,7 +177,7 @@ function NavList() {
                     color="gray"
                     className="font-medium"
         >
-          <ListItem placeholder={undefined} className="flex items-center text-emerald gap-2 py-2 pr-4">
+          <ListItem placeholder={undefined} className="flex items-center text-emerald hover:text-emerald focus:text-emerald active:text-emerald gap-2 py-2 pr-4">
             NFTs
           </ListItem>
         </Typography>

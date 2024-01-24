@@ -8,7 +8,7 @@ const App: React.FC = () => {
   const signupState = useDashboardSharedVariable();
 
   return (
-    <div className="overflow-x-hidden overflow-x-auto">
+    <div className="overflow-x-hidden m-0.5">
       <DashboardSharedProvider signupState={signupState}>
       <NavbarMenu />
       <Body />

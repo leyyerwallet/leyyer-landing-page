@@ -175,7 +175,7 @@ const Grid = () => {
                     placeholder={undefined}
                     variant="h5"
                     color="white"
-                    className="font-normal mt-4 mb-4"
+                    className="font-poppins font-normal mb-4"
                 >
                   Manage <span className="text-emerald"> Effortlessly </span>
                 </Typography>
