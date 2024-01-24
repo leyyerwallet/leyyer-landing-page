@@ -28,7 +28,7 @@ const Steps: React.FC = () => {
           </Typography>
           <div className="grid lg:grid-cols-3 gap-x-2 auto-cols-auto m-6 pt-8 sm:grid-cols-1">
             {/* Step 1 */}
-            <div className="place-self-center pr-1.5 flex sm:flex-grow w-4/5 sm:w-auto">
+            <div className="place-self-center sm:place-self-auto pr-1.5 flex sm:flex-grow w-4/5 sm:w-auto">
               <Card placeholder={undefined} className="m-8 w-96 shadow-2xl">
                 <CardHeader placeholder={undefined} className="shadow-none mx-0">
                   <img
@@ -49,7 +49,7 @@ const Steps: React.FC = () => {
             </div>
 
             {/* Step 2 */}
-            <div className="place-self-center pr-1.5 flex sm:flex-grow w-4/5 sm:w-auto">
+            <div className="place-self-center sm:place-self-auto pr-1.5 flex sm:flex-grow w-4/5 sm:w-auto">
               <Card placeholder={undefined} className="m-8 w-96 shadow-2xl">
                 <CardHeader placeholder={undefined} className="shadow-none mx-0">
                   <img
@@ -70,7 +70,7 @@ const Steps: React.FC = () => {
             </div>
 
             {/* Step 3 */}
-            <div className="place-self-center pr-1.5 flex sm:flex-grow w-4/5 sm:w-auto">
+            <div className="place-self-center sm:place-self-auto pr-1.5 flex sm:flex-grow w-4/5 sm:w-auto">
               <Card placeholder={undefined} className="m-8 w-96 shadow-2xl">
                 <CardHeader placeholder={undefined} className="shadow-none mx-0">
                   <img
