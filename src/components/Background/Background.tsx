@@ -1,5 +1,3 @@
-//inset-x-0 top-[calc(100%-70rem)]
-
 interface BackgroundProps {
     className: string
 }
