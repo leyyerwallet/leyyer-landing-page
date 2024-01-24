@@ -12,7 +12,7 @@ const Dashboard: React.FC = forwardRef(() => {
   const { showSignUp, handleSignUp } = useDashboardSharedVariable();
 
   return (
-        <div className=" max-w-[1408px] mx-auto p-2 md:p-8 gap-2 md:gap-12 m-2 md:m-[1rem]">
+        <div className=" relative flex place-content-center text-balance">
           <div className="relative isolate gap-2 md:gap-12">
             <div className="mx-auto md:flex md:w-full md:max-w-[1408px] lg:px-24 py-8 md:py-16">
               {showSignUp && (
