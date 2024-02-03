@@ -137,36 +137,40 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-3 justify-between text-left">
             {LINKS.map(({ title, items }) => (
-                  <ul key={title}>
-                    <Typography
-                        placeholder={undefined}
-                        variant="small"
-                        color="black"
-                        className="mb-2 font-poppins leading-4 font-bold"
-                    >
-                      {title}
-                    </Typography>
-                    {items.map((link) => (
-                        <li key={link}>
-                          <Typography
-                              placeholder={undefined}
-                              variant="small"
-                              target ="blank"
-                              as="a"
-                              href={title === "Company" && link === "Pitch Deck" ? "https://drive.google.com/file/d/1FoLjFifjKyFIbbeLsakbCG7R2_EtBWPC/view?pli=1" : "#"}
-                              color="black"
-                              className="py-1.5 font-poppins font-medium leading-4 transition-colors opacity-40 hover:text-blue-gray-900"
-                          >
-                            {link}
-                          </Typography>
-                        </li>
-                    ))}
-                  </ul>
-              ))}
-            </div>
+                <ul key={title}>
+                  <Typography
+                      placeholder={undefined}
+                      variant="small"
+                      color="black"
+                      className="mb-2 font-poppins leading-4 font-bold"
+                  >
+                    {title}
+                  </Typography>
+                  {items.map((link) => (
+                      <li key={link}>
+                        <Typography
+                            placeholder={undefined}
+                            variant="small"
+                            target="blank"
+                            as="a"
+                            href={
+                              title === "Company" && link === "About us"
+                                  ? "/About_us/About_us" // Link to your AboutUs component
+                                  : "#"
+                            }
+                            color="black"
+                            className="py-1.5 font-poppins font-medium leading-4 transition-colors opacity-40 hover:text-blue-gray-900"
+                        >
+                          {link}
+                        </Typography>
+                      </li>
+                  ))}
+                </ul>
+            ))}
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
   );
 };
 export default Footer;
