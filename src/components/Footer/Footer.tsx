@@ -151,11 +151,10 @@ const Footer = () => {
                         <Typography
                             placeholder={undefined}
                             variant="small"
-                            target="blank"
                             as="a"
                             href={
                               title === "Company" && link === "About us"
-                                  ? "/About_us/About_us" // Link to your AboutUs component
+                                  ? "/about" // Link to your AboutUs component
                                   : "#"
                             }
                             color="black"

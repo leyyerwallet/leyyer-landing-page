@@ -1,21 +1,18 @@
-import Dashboard from "../Dashboard/Dashboard.tsx";
-import Cards from "../Cards/Cards.tsx";
-import Grid from "../Grid/Grid.tsx";
-import Steps from "../Steps/Steps.tsx";
-import Links from "../Links/Links.tsx";
 import React from "react";
-import ManagePortfolio from "../ManagePortfolio/ManagePortfolio.tsx";
+import Home from "../Home/Home.tsx";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Aboutus from "../Aboutus/Aboutus.tsx";
 
 const Body: React.FC = () => {
     return (
-        <>
-            <Dashboard />
-            <Steps />
-            <ManagePortfolio />
-            <Cards />
-            <Grid />
-            <Links />
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/">
+                    <Route index element={<Home />} />
+                    <Route path="/about" element={<Aboutus />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
     )
 }
 
