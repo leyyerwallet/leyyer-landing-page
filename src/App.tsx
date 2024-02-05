@@ -1,20 +1,16 @@
 import React from 'react';
-import NavbarMenu from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
-import Body from "./components/Body/Body.tsx";
-import {DashboardSharedProvider, useDashboardSharedVariable} from "./shared/dashboard.shared.tsx";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Landing from './pages/Landing';
+import SignUp from './pages/SignUp';
 
 const App: React.FC = () => {
-  const signupState = useDashboardSharedVariable();
-
   return (
-    <div className="overflow-x-hidden m-0.5">
-      <DashboardSharedProvider signupState={signupState}>
-      <NavbarMenu />
-      <Body />
-      <Footer />
-      </DashboardSharedProvider>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Landing />} />
+        <Route path='/signup' element={<SignUp />} />
+      </Routes>
+    </Router>
   );
 };
 
