@@ -1,44 +1,47 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { UserCredentials } from '../../types/signInTypes';
 
-interface Props {
-  email: string;
-  setEmail: (value: string) => void;
-  password: string;
-  setPassword: (value: string) => void;
+interface InputFieldsBlockProps {
+  credentials: UserCredentials;
+  setCredentials: (credentials: UserCredentials) => void;
 }
 
-const InputFieldsBlock: React.FC<Props> = ({
-  email,
-  setEmail,
-  password,
-  setPassword,
+const InputFieldsBlock: React.FC<InputFieldsBlockProps> = ({
+  credentials,
+  setCredentials,
 }) => {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState<boolean>(false);
 
-  const togglePasswordVisibility = () => setShowPassword(!showPassword);
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setCredentials({ ...credentials, [name]: value });
+  };
 
   return (
     <div className='relative mb-6'>
       <input
+        name='email'
         type='email'
         placeholder='Email'
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        value={credentials.email}
+        onChange={handleInputChange}
         className='w-full px-4 py-3 text-gray-700 placeholder-gray-500 bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:placeholder-transparent mb-2'
       />
       <div className='relative'>
         <input
+          name='password'
           type={showPassword ? 'text' : 'password'}
           placeholder='Password'
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={credentials.password}
+          onChange={handleInputChange}
           className='w-full px-4 py-3 text-gray-700 placeholder-gray-500 bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:placeholder-transparent pr-14'
         />
         <button
+          type='button'
           aria-label={showPassword ? 'Hide password' : 'Show password'}
           className='absolute top-1/2 transform -translate-y-1/2 right-2 flex items-center px-2'
-          onClick={togglePasswordVisibility}
+          onClick={() => setShowPassword(!showPassword)}
         >
           {showPassword ? <FaEyeSlash /> : <FaEye />}
         </button>
