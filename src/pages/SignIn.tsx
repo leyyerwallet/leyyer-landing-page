@@ -12,7 +12,7 @@ import { SignInResponse, UserCredentials } from '../types/signInTypes';
 const SignIn: React.FC = () => {
   const [credentials, setCredentials] = useState<UserCredentials>({
     email: '',
-    password: '',
+    password: ''
   });
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -22,7 +22,7 @@ const SignIn: React.FC = () => {
       const response = await fetch('http://localhost:3000/api/auth/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(credentials),
+        body: JSON.stringify(credentials)
       });
       if (!response.ok) throw new Error('Failed to sign in');
       const data: SignInResponse = await response.json();
@@ -35,10 +35,10 @@ const SignIn: React.FC = () => {
   };
 
   return (
-    <div className='font-poppins flex flex-col items-center justify-center min-h-screen bg-white'>
+    <div className="font-poppins flex flex-col items-center justify-center min-h-screen bg-white">
       <form
         onSubmit={handleSignIn}
-        className='w-full max-w-md px-10 py-10 text-center'
+        className="w-full max-w-md px-10 py-10 text-center"
       >
         <IconBlock />
         <WelcomeTextBlock />
@@ -47,7 +47,7 @@ const SignIn: React.FC = () => {
           setCredentials={setCredentials}
         />
         <SignInAndForgotPasswordBlock />
-        {errorMessage && <div className='text-red-500'>{errorMessage}</div>}
+        {errorMessage && <div className="text-red-500">{errorMessage}</div>}
         <SeparatorBlock />
         <AlternativeSignInsBlock />
         <SignUpBlock />

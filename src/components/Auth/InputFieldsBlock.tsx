@@ -9,7 +9,7 @@ interface InputFieldsBlockProps {
 
 const InputFieldsBlock: React.FC<InputFieldsBlockProps> = ({
   credentials,
-  setCredentials,
+  setCredentials
 }) => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
@@ -19,28 +19,28 @@ const InputFieldsBlock: React.FC<InputFieldsBlockProps> = ({
   };
 
   return (
-    <div className='relative mb-6'>
+    <div className="relative mb-6">
       <input
-        name='email'
-        type='email'
-        placeholder='Email'
+        name="email"
+        type="email"
+        placeholder="Email"
         value={credentials.email}
         onChange={handleInputChange}
-        className='w-full px-4 py-3 text-gray-700 placeholder-gray-500 bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:placeholder-transparent mb-2'
+        className="w-full px-4 py-3 text-gray-700 placeholder-gray-500 bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:placeholder-transparent mb-2"
       />
-      <div className='relative'>
+      <div className="relative">
         <input
-          name='password'
+          name="password"
           type={showPassword ? 'text' : 'password'}
-          placeholder='Password'
+          placeholder="Password"
           value={credentials.password}
           onChange={handleInputChange}
-          className='w-full px-4 py-3 text-gray-700 placeholder-gray-500 bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:placeholder-transparent pr-14'
+          className="w-full px-4 py-3 text-gray-700 placeholder-gray-500 bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:placeholder-transparent pr-14"
         />
         <button
-          type='button'
+          type="button"
           aria-label={showPassword ? 'Hide password' : 'Show password'}
-          className='absolute top-1/2 transform -translate-y-1/2 right-2 flex items-center px-2'
+          className="absolute top-1/2 transform -translate-y-1/2 right-2 flex items-center px-2"
           onClick={() => setShowPassword(!showPassword)}
         >
           {showPassword ? <FaEyeSlash /> : <FaEye />}
