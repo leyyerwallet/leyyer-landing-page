@@ -223,7 +223,7 @@ const NavbarMenu: React.FC = () => {
   const navigate = useNavigate();
 
   const handleSignUpClick = () => {
-    navigate('/signup');
+    navigate('/signin');
   };
 
   useEffect(() => {
