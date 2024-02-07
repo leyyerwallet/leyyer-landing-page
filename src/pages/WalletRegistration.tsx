@@ -2,6 +2,7 @@ import { useState } from 'react';
 import leyyerIcon from '../assets/icons/leyyer-icon.svg';
 import Step1WalletType from './WalletRegSteps/Step1WalletType';
 import Step2Agreements from './WalletRegSteps/Step2Agreements';
+import Step3GeneratePhrase from './WalletRegSteps/Step3GeneratePhrase ';
 
 const WalletRegistration = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -42,13 +43,13 @@ const WalletRegistration = () => {
             setWalletType={handleWalletTypeChange}
           />
         )}
-
         {currentStep === 2 && (
           <Step2Agreements
             agreements={agreements}
             onAgreementChange={handleAgreementChange}
           />
         )}
+        {currentStep === 3 && <Step3GeneratePhrase />}
 
         <button
           onClick={handleContinue}
