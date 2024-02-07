@@ -225,6 +225,9 @@ const NavbarMenu: React.FC = () => {
   const handleSignUpClick = () => {
     navigate('/signin');
   };
+  const handleAccessWalletClick = () => {
+    navigate('/registration');
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -269,9 +272,9 @@ const NavbarMenu: React.FC = () => {
             variant="filled"
             size="sm"
             className="text-white bg-emerald normal-case"
-            onClick={() => window.open('https://demo.leyyer.com')}
+            onClick={handleAccessWalletClick}
           >
-            Demo Wallet
+            Access Wallet
           </Button>
         </div>
 
@@ -311,9 +314,9 @@ const NavbarMenu: React.FC = () => {
             size="sm"
             fullWidth
             className="text-white bg-emerald normal-case"
-            onClick={() => window.open('https://demo.leyyer.com')}
+            onClick={handleAccessWalletClick}
           >
-            Demo Wallet
+            Access Wallet
           </Button>
         </div>
       </Collapse>
