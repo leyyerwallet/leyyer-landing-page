@@ -10,11 +10,9 @@ const WalletRegistration = () => {
     lostFunds: false,
     exposeRisk: false
   });
-  const [showError, setShowError] = useState(false);
 
   const handleWalletTypeChange = (type: string) => {
     setWalletType(type);
-    setShowError(false);
   };
 
   const handleAgreementChange = (key: keyof typeof agreements) => {
@@ -22,23 +20,12 @@ const WalletRegistration = () => {
   };
 
   const handleContinue = () => {
-    if (currentStep === 1 && !walletType) {
-      setShowError(true);
-      return;
-    }
-    if (
-      currentStep === 2 &&
-      (!agreements.lostFunds || !agreements.exposeRisk)
-    ) {
-      setShowError(true);
-      return;
-    }
-    if (currentStep >= 2) {
-      console.log('Registration complete or moving to next step');
-      return;
-    }
     setCurrentStep((prevStep) => prevStep + 1);
   };
+
+  const isContinueDisabled =
+    (currentStep === 1 && !walletType) ||
+    (currentStep === 2 && (!agreements.lostFunds || !agreements.exposeRisk));
 
   return (
     <div className="font-poppins flex flex-col items-center justify-center min-h-screen bg-white">
@@ -63,18 +50,10 @@ const WalletRegistration = () => {
           />
         )}
 
-        {showError && (
-          <div className="text-red-500 mb-4">
-            {currentStep === 1 &&
-              'Wallet type must be selected before continuing'}
-            {currentStep === 2 &&
-              'All agreements should be checked before continuing'}
-          </div>
-        )}
-
         <button
           onClick={handleContinue}
-          className="w-full px-4 py-2 font-semibold text-white bg-emerald rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+          disabled={isContinueDisabled}
+          className={`w-full px-4 py-2 font-semibold text-white bg-emerald rounded-md ${!isContinueDisabled ? '' : 'opacity-50 cursor-not-allowed'} focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2`}
         >
           Continue
         </button>
