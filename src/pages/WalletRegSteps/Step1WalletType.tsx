@@ -19,9 +19,12 @@ const Step1WalletType: React.FC<Step1WalletTypeProps> = ({
         {['Personal', 'Corporate', 'Project'].map((type) => (
           <Option
             key={type}
-            type={type}
-            selectedType={walletType}
-            onChange={setWalletType}
+            label={type}
+            checked={walletType === type}
+            onChange={() => setWalletType(type)}
+            inputType="radio"
+            name="walletType"
+            value={type}
           />
         ))}
       </div>

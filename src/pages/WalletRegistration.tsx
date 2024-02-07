@@ -1,21 +1,43 @@
 import { useState } from 'react';
 import leyyerIcon from '../assets/icons/leyyer-icon.svg';
 import Step1WalletType from './WalletRegSteps/Step1WalletType';
-import ErrorMessage from '../components/ErrorMessage/ErrorMessage';
+import Step2Agreements from './WalletRegSteps/Step2Agreements';
 
-const WalletRegistrationPage = () => {
+const WalletRegistration = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [walletType, setWalletType] = useState('');
+  const [agreements, setAgreements] = useState({
+    lostFunds: false,
+    exposeRisk: false
+  });
   const [showError, setShowError] = useState(false);
 
+  const handleWalletTypeChange = (type: string) => {
+    setWalletType(type);
+    setShowError(false);
+  };
+
+  const handleAgreementChange = (key: keyof typeof agreements) => {
+    setAgreements((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
   const handleContinue = () => {
-    if (!walletType) {
+    if (currentStep === 1 && !walletType) {
       setShowError(true);
       return;
     }
-    console.log(walletType);
-    setShowError(false);
-    setCurrentStep(currentStep + 1);
+    if (
+      currentStep === 2 &&
+      (!agreements.lostFunds || !agreements.exposeRisk)
+    ) {
+      setShowError(true);
+      return;
+    }
+    if (currentStep >= 2) {
+      console.log('Registration complete or moving to next step');
+      return;
+    }
+    setCurrentStep((prevStep) => prevStep + 1);
   };
 
   return (
@@ -24,18 +46,30 @@ const WalletRegistrationPage = () => {
         <img
           src={leyyerIcon}
           alt="Leyyer Wallet"
-          className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-10"
+          className="w-24 h-24 mx-auto mb-10"
         />
 
         {currentStep === 1 && (
           <Step1WalletType
             walletType={walletType}
-            setWalletType={setWalletType}
+            setWalletType={handleWalletTypeChange}
+          />
+        )}
+
+        {currentStep === 2 && (
+          <Step2Agreements
+            agreements={agreements}
+            onAgreementChange={handleAgreementChange}
           />
         )}
 
         {showError && (
-          <ErrorMessage message="Please select a wallet type to continue." />
+          <div className="text-red-500 mb-4">
+            {currentStep === 1 &&
+              'Wallet type must be selected before continuing'}
+            {currentStep === 2 &&
+              'All agreements should be checked before continuing'}
+          </div>
         )}
 
         <button
@@ -49,4 +83,4 @@ const WalletRegistrationPage = () => {
   );
 };
 
-export default WalletRegistrationPage;
+export default WalletRegistration;

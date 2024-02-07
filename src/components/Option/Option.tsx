@@ -1,36 +1,41 @@
 import React from 'react';
 
-type WalletOptionProps = {
-  type: string;
-  selectedType: string;
-  onChange: (type: string) => void;
+type OptionProps = {
+  label: string;
+  checked: boolean;
+  onChange: () => void;
+  inputType: 'radio' | 'checkbox';
+  name?: string;
+  value?: string;
 };
 
-const WalletOption: React.FC<WalletOptionProps> = ({
-  type,
-  selectedType,
-  onChange
+const Option: React.FC<OptionProps> = ({
+  label,
+  checked,
+  onChange,
+  inputType,
+  name,
+  value
 }) => (
-  <div
-    className="group flex justify-between items-center p-2 w-full bg-white rounded-md border-2 border-emerald cursor-pointer"
-    onClick={() => onChange(type)}
-  >
-    <span className="text-sm font-medium text-gray-900">{type}</span>
-    <div className="flex items-center justify-center">
-      <input
-        id={type}
-        type="radio"
-        name="walletType"
-        value={type}
-        checked={selectedType === type}
-        onChange={() => onChange(type)}
-        className="opacity-0 absolute"
-      />
-      <div
-        className={`w-4 h-4 inline-flex justify-center items-center rounded-sm ${selectedType === type ? 'bg-emerald' : 'bg-transparent border border-gray-300'}`}
-      ></div>
-    </div>
-  </div>
+  <label className="group flex justify-between items-center p-2 w-full bg-white rounded-md border-2 border-emerald cursor-pointer">
+    <span
+      className="text-sm font-medium text-gray-900"
+      style={{ maxWidth: 'calc(100% - 1.5rem)' }}
+    >
+      {label}
+    </span>
+    <input
+      type={inputType}
+      name={name}
+      value={value}
+      checked={checked}
+      onChange={onChange}
+      className={`appearance-none outline-none inline-block align-middle h-4 w-4 border border-gray-300 rounded 
+              ${inputType === 'checkbox' ? 'form-checkbox' : 'form-radio'} 
+              ${checked ? 'bg-emerald' : ''}
+              cursor-pointer`}
+    />
+  </label>
 );
 
-export default WalletOption;
+export default Option;
