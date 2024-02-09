@@ -4,6 +4,7 @@ import Step1WalletType from './WalletRegSteps/Step1WalletType';
 import Step2Agreements from './WalletRegSteps/Step2Agreements';
 import Step3GeneratePhrase from './WalletRegSteps/Step3GeneratePhrase';
 import Step4VerifyPhrase from './WalletRegSteps/Step4VerifyPhrase';
+import ErrorMessage from '../components/ErrorMessage/ErrorMessage';
 
 const WalletRegistration = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -81,7 +82,7 @@ const WalletRegistration = () => {
             handleWordSelection={handleWordSelection}
           />
         )}
-        {error && <div className="text-red-500 mb-4">{error}</div>}
+        {error && <ErrorMessage message={error} />}
         <button
           onClick={handleContinue}
           disabled={isContinueDisabled}
