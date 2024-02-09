@@ -1,4 +1,5 @@
 import React from 'react';
+import Word from '../../components/Word/Word';
 
 type Step4VerifyPhraseProps = {
   originalMnemonic: string;
@@ -21,19 +22,12 @@ const Step4VerifyPhrase: React.FC<Step4VerifyPhraseProps> = ({
         Tap the words to put them next to each other in the correct order.
       </p>
       <div className="grid grid-cols-3 gap-4 mb-8">
-        {selectedWords.map((word, index) => (
-          <div
+        {Array.from({ length: 12 }, (_, index) => (
+          <Word
             key={index}
-            className="p-2 bg-white border-2 border-emerald rounded-md"
-          >
-            {word}
-          </div>
-        ))}
-        {Array.from({ length: 12 - selectedWords.length }).map((_, index) => (
-          <div
-            key={index}
-            className="p-2 bg-transparent border-2 border-dashed border-gray-400 rounded-md"
-          ></div>
+            word={selectedWords[index]}
+            isSelected={index < selectedWords.length}
+          />
         ))}
       </div>
       {remainingWords.length > 0 && (

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Word from '../../components/Word/Word';
 import copyToClipboard from '../../utils/copyToClipboard';
 
 type Step3GeneratePhraseProps = {
@@ -32,12 +33,7 @@ const Step3GeneratePhrase: React.FC<Step3GeneratePhraseProps> = ({
       </p>
       <div className="grid grid-cols-2 gap-4 mb-8">
         {words.map((word, index) => (
-          <div
-            key={index}
-            className="p-2 bg-white border-2 border-emerald rounded-md"
-          >
-            {word}
-          </div>
+          <Word key={index} word={word} isSelected={true} />
         ))}
       </div>
       <div className="flex justify-between items-center max-w-xs mx-auto mb-4">
