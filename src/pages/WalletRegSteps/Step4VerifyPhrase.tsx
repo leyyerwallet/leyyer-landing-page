@@ -2,36 +2,17 @@ import React from 'react';
 
 type Step4VerifyPhraseProps = {
   originalMnemonic: string;
-  onVerifySuccess: () => void;
-  onVerifyFailure: () => void;
+  selectedWords: string[];
+  handleWordSelection: (word: string) => void;
 };
 
 const Step4VerifyPhrase: React.FC<Step4VerifyPhraseProps> = ({
   originalMnemonic,
-  onVerifySuccess,
-  onVerifyFailure
+  selectedWords,
+  handleWordSelection
 }) => {
   const words = originalMnemonic.split(' ');
-  const [selectedWords, setSelectedWords] = React.useState<string[]>([]);
-  const [remainingWords, setRemainingWords] = React.useState<string[]>(words);
-
-  const handleWordSelection = (word: string) => {
-    const newSelectedWords = [...selectedWords, word];
-    const newRemainingWords = remainingWords.filter((w) => w !== word);
-
-    setSelectedWords(newSelectedWords);
-    setRemainingWords(newRemainingWords);
-
-    if (newSelectedWords.length === words.length) {
-      if (newSelectedWords.join(' ') === originalMnemonic) {
-        onVerifySuccess();
-      } else {
-        onVerifyFailure();
-        setSelectedWords([]);
-        setRemainingWords(words);
-      }
-    }
-  };
+  const remainingWords = words.filter((word) => !selectedWords.includes(word));
 
   return (
     <div className="text-center">
@@ -40,13 +21,19 @@ const Step4VerifyPhrase: React.FC<Step4VerifyPhraseProps> = ({
         Tap the words to put them next to each other in the correct order.
       </p>
       <div className="grid grid-cols-3 gap-4 mb-8">
-        {Array.from({ length: 12 }).map((_, index) => (
+        {selectedWords.map((word, index) => (
           <div
             key={index}
-            className={`p-2 ${selectedWords[index] ? 'bg-white border-2 border-emerald' : 'bg-transparent border-2 border-dashed border-gray-400'} rounded-md`}
+            className="p-2 bg-white border-2 border-emerald rounded-md"
           >
-            {selectedWords[index] || ''}
+            {word}
           </div>
+        ))}
+        {Array.from({ length: 12 - selectedWords.length }).map((_, index) => (
+          <div
+            key={index}
+            className="p-2 bg-transparent border-2 border-dashed border-gray-400 rounded-md"
+          ></div>
         ))}
       </div>
       {remainingWords.length > 0 && (

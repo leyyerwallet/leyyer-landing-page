@@ -15,6 +15,7 @@ const WalletRegistration = () => {
   const [originalMnemonic, setOriginalMnemonic] = useState(
     'apple banana cherry date elderberry fig grape hazelnut kiwi lemon mango nut'
   );
+  const [selectedWords, setSelectedWords] = useState<string[]>([]);
   const [error, setError] = useState('');
 
   const handleAgreementChange = (key: keyof typeof agreements) => {
@@ -24,25 +25,31 @@ const WalletRegistration = () => {
     }));
   };
 
-  const handleVerificationSuccess = () => {
-    window.location.href = 'https://app.leyyer.com';
-  };
-
-  const handleVerificationFailure = () => {
-    setError('Words are not in the correct order. Please try again.');
-    setCurrentStep(4);
+  const handleWordSelection = (word: string) => {
+    setSelectedWords((prev) => [...prev, word]);
+    setError('');
   };
 
   const handleContinue = () => {
     if (currentStep < 4) {
       setCurrentStep(currentStep + 1);
       setError('');
+    } else if (currentStep === 4) {
+      if (selectedWords.join(' ') === originalMnemonic) {
+        window.location.href = 'https://app.leyyer.com';
+      } else {
+        setError('Words are not in the correct order. Please try again.');
+        setSelectedWords([]);
+      }
+    } else {
+      setCurrentStep(currentStep + 1);
     }
   };
 
   const isContinueDisabled =
     (currentStep === 1 && !walletType) ||
-    (currentStep === 2 && (!agreements.lostFunds || !agreements.exposeRisk));
+    (currentStep === 2 && (!agreements.lostFunds || !agreements.exposeRisk)) ||
+    (currentStep === 4 && selectedWords.length < 12);
 
   return (
     <div className="font-poppins flex flex-col items-center justify-center min-h-screen bg-white">
@@ -70,8 +77,8 @@ const WalletRegistration = () => {
         {currentStep === 4 && (
           <Step4VerifyPhrase
             originalMnemonic={originalMnemonic}
-            onVerifySuccess={handleVerificationSuccess}
-            onVerifyFailure={handleVerificationFailure}
+            selectedWords={selectedWords}
+            handleWordSelection={handleWordSelection}
           />
         )}
         {error && <div className="text-red-500 mb-4">{error}</div>}
