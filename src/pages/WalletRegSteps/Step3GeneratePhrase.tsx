@@ -1,27 +1,32 @@
-import { useState, useEffect } from 'react';
-import copyToClipboard from '../../utils/copyToClipboard ';
+import React, { useState, useEffect } from 'react';
+import copyToClipboard from '../../utils/copyToClipboard';
 
-const Step3GeneratePhrase = () => {
-  const [mnemonic, setMnemonic] = useState('');
+type Step3GeneratePhraseProps = {
+  setMnemonic: React.Dispatch<React.SetStateAction<string>>;
+};
+
+const Step3GeneratePhrase: React.FC<Step3GeneratePhraseProps> = ({
+  setMnemonic
+}) => {
   const [words, setWords] = useState<string[]>([]);
-  const [wordsCoppied, setWordsCoppied] = useState(false);
+  const [wordsCopied, setWordsCopied] = useState(false);
 
   useEffect(() => {
     const fakeMnemonic =
       'apple banana cherry date elderberry fig grape hazelnut kiwi lemon mango nut';
     setMnemonic(fakeMnemonic);
     setWords(fakeMnemonic.split(' '));
-  }, []);
+  }, [setMnemonic]);
 
   const handleCopy = () => {
-    copyToClipboard(mnemonic);
-    setWordsCoppied(true);
+    copyToClipboard(words.join(' '));
+    setWordsCopied(true);
   };
 
   return (
     <div className="text-center">
       <h1 className="text-xl font-bold mb-4">Your Secret Phrase</h1>
-      <p className="mb-8 text-s">
+      <p className="mb-8 text-sm">
         Write down or copy these words in the right order and save them
         somewhere safe.
       </p>
@@ -41,9 +46,9 @@ const Step3GeneratePhrase = () => {
         </button>
         <button
           onClick={handleCopy}
-          className={`px-4 py-2 font-semibold ${wordsCoppied ? 'text-gray-500 bg-gray-200' : 'text-emerald bg-white'} rounded-md flex-1 ml-2`}
+          className={`px-4 py-2 font-semibold ${wordsCopied ? 'text-gray-500 bg-gray-200' : 'text-emerald bg-white'} rounded-md flex-1 ml-2`}
         >
-          {wordsCoppied ? 'Copied!' : 'Copy words'}
+          {wordsCopied ? 'Copied!' : 'Copy words'}
         </button>
       </div>
       <p className="text-red-500 mb-4">

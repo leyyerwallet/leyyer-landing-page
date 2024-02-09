@@ -2,7 +2,8 @@ import { useState } from 'react';
 import leyyerIcon from '../assets/icons/leyyer-icon.svg';
 import Step1WalletType from './WalletRegSteps/Step1WalletType';
 import Step2Agreements from './WalletRegSteps/Step2Agreements';
-import Step3GeneratePhrase from './WalletRegSteps/Step3GeneratePhrase ';
+import Step3GeneratePhrase from './WalletRegSteps/Step3GeneratePhrase';
+import Step4VerifyPhrase from './WalletRegSteps/Step4VerifyPhrase';
 
 const WalletRegistration = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -11,17 +12,32 @@ const WalletRegistration = () => {
     lostFunds: false,
     exposeRisk: false
   });
-
-  const handleWalletTypeChange = (type: string) => {
-    setWalletType(type);
-  };
+  const [originalMnemonic, setOriginalMnemonic] = useState(
+    'apple banana cherry date elderberry fig grape hazelnut kiwi lemon mango nut'
+  );
+  const [error, setError] = useState('');
 
   const handleAgreementChange = (key: keyof typeof agreements) => {
-    setAgreements((prev) => ({ ...prev, [key]: !prev[key] }));
+    setAgreements((prev) => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
+
+  const handleVerificationSuccess = () => {
+    window.location.href = 'https://app.leyyer.com';
+  };
+
+  const handleVerificationFailure = () => {
+    setError('Words are not in the correct order. Please try again.');
+    setCurrentStep(4);
   };
 
   const handleContinue = () => {
-    setCurrentStep((prevStep) => prevStep + 1);
+    if (currentStep < 4) {
+      setCurrentStep(currentStep + 1);
+      setError('');
+    }
   };
 
   const isContinueDisabled =
@@ -36,11 +52,10 @@ const WalletRegistration = () => {
           alt="Leyyer Wallet"
           className="w-24 h-24 mx-auto mb-10"
         />
-
         {currentStep === 1 && (
           <Step1WalletType
             walletType={walletType}
-            setWalletType={handleWalletTypeChange}
+            setWalletType={setWalletType}
           />
         )}
         {currentStep === 2 && (
@@ -49,8 +64,17 @@ const WalletRegistration = () => {
             onAgreementChange={handleAgreementChange}
           />
         )}
-        {currentStep === 3 && <Step3GeneratePhrase />}
-
+        {currentStep === 3 && (
+          <Step3GeneratePhrase setMnemonic={setOriginalMnemonic} />
+        )}
+        {currentStep === 4 && (
+          <Step4VerifyPhrase
+            originalMnemonic={originalMnemonic}
+            onVerifySuccess={handleVerificationSuccess}
+            onVerifyFailure={handleVerificationFailure}
+          />
+        )}
+        {error && <div className="text-red-500 mb-4">{error}</div>}
         <button
           onClick={handleContinue}
           disabled={isContinueDisabled}
