@@ -222,7 +222,7 @@ const NavbarMenu: React.FC = () => {
   const [openNav, setOpenNav] = useState<boolean>(false);
   const navigate = useNavigate();
 
-  const handleSignUpClick = () => {
+  const handleSignInClick = () => {
     navigate('/signin');
   };
   const handleAccessWalletClick = () => {
@@ -262,9 +262,9 @@ const NavbarMenu: React.FC = () => {
             variant="outlined"
             size="sm"
             className="text-emerald border-emerald normal-case"
-            onClick={handleSignUpClick}
+            onClick={handleSignInClick}
           >
-            Sign-Up
+            Sign In
           </Button>
 
           <Button
@@ -303,9 +303,9 @@ const NavbarMenu: React.FC = () => {
             size="sm"
             className="text-emerald border-emerald normal-case"
             fullWidth
-            onClick={handleSignUpClick}
+            onClick={handleSignInClick}
           >
-            Sign-Up
+            Sign In
           </Button>
 
           <Button
